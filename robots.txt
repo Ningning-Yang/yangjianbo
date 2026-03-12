@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /works.html
+
+Sitemap: https://yangjianbo.com/sitemap.xml

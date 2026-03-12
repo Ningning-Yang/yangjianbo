@@ -1,9 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://yangjianbo.com/</loc>
     <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://yangjianbo.com/art-portfolio/10.jpg</image:loc>
+      <image:title>Yang Jianbo — Tibetan Festival, Oil on Canvas, 2024</image:title>
+      <image:caption>Tibetan Festival by Yang Jianbo. Oil on Canvas, 2024.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://yangjianbo.com/art-portfolio/3.jpg</image:loc>
+      <image:title>Yang Jianbo — Seagulls in Flight, Pencil on Paper, 2021</image:title>
+      <image:caption>Seagulls in Flight by Yang Jianbo. Pencil on Paper, 2021.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://yangjianbo.com/art-portfolio/14.jpg</image:loc>
+      <image:title>Yang Jianbo — The Wanderer, Oil on Canvas, 2019</image:title>
+      <image:caption>The Wanderer by Yang Jianbo. Oil on Canvas, 2019.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://yangjianbo.com/art-portfolio/8.jpg</image:loc>
+      <image:title>Yang Jianbo — Whales Over the Mountains, Pencil on Paper, 2018</image:title>
+      <image:caption>Whales Over the Mountains by Yang Jianbo. Pencil on Paper, 2018.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://yangjianbo.com/art-portfolio/11.jpg</image:loc>
+      <image:title>Yang Jianbo — Herdsman, Oil on Canvas, Diptych</image:title>
+      <image:caption>Herdsman by Yang Jianbo. Oil on Canvas, Diptych.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://yangjianbo.com/art-portfolio/5.jpg</image:loc>
+      <image:title>Yang Jianbo — Gulls and Peaks, Pencil on Paper, 2021</image:title>
+      <image:caption>Gulls and Peaks by Yang Jianbo. Pencil on Paper, 2021.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://yangjianbo.com/art-portfolio/12.jpg</image:loc>
+      <image:title>Yang Jianbo — Plateau Herd, Oil on Canvas</image:title>
+      <image:caption>Plateau Herd by Yang Jianbo. Oil on Canvas.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://yangjianbo.com/art-portfolio/4.jpg</image:loc>
+      <image:title>Yang Jianbo — Rest at the Clifftop, Pencil on Paper, 2021</image:title>
+      <image:caption>Rest at the Clifftop by Yang Jianbo. Pencil on Paper, 2021.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://yangjianbo.com/art-portfolio/16.jpg</image:loc>
+      <image:title>Yang Jianbo — Among the Flock, Oil on Canvas, 2019</image:title>
+      <image:caption>Among the Flock by Yang Jianbo. Oil on Canvas, 2019.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://yangjianbo.com/art-portfolio/7.jpg</image:loc>
+      <image:title>Yang Jianbo — The Departure, Pencil on Paper, 2021</image:title>
+      <image:caption>The Departure by Yang Jianbo. Pencil on Paper, 2021.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://yangjianbo.com/art-portfolio/9.jpg</image:loc>
+      <image:title>Yang Jianbo — The Shepherd and the Blue Mountain, Oil on Canvas, 2019</image:title>
+      <image:caption>The Shepherd and the Blue Mountain by Yang Jianbo. Oil on Canvas, 2019.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://yangjianbo.com/art-portfolio/6.jpg</image:loc>
+      <image:title>Yang Jianbo — Glacier Gathering, Pencil on Paper</image:title>
+      <image:caption>Glacier Gathering by Yang Jianbo. Pencil on Paper.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://yangjianbo.com/art-portfolio/13.jpg</image:loc>
+      <image:title>Yang Jianbo — The White Coat, Oil on Canvas</image:title>
+      <image:caption>The White Coat by Yang Jianbo. Oil on Canvas.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://yangjianbo.com/art-portfolio/2.jpg</image:loc>
+      <image:title>Yang Jianbo — Shore Birds, Pencil on Paper, 2021</image:title>
+      <image:caption>Shore Birds by Yang Jianbo. Pencil on Paper, 2021.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://yangjianbo.com/art-portfolio/15.jpg</image:loc>
+      <image:title>Yang Jianbo — The Shepherd, Oil on Canvas</image:title>
+      <image:caption>The Shepherd by Yang Jianbo. Oil on Canvas.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://yangjianbo.com/art-portfolio/1.jpg</image:loc>
+      <image:title>Yang Jianbo — Mountain Passage, Pencil on Paper, 2018</image:title>
+      <image:caption>Mountain Passage by Yang Jianbo. Pencil on Paper, 2018.</image:caption>
+    </image:image>
   </url>
 </urlset>
