@@ -454,14 +454,68 @@ footer {
 @media (max-width: 900px) {
   nav { padding: 20px 24px; }
   .nav-links { display: none; }
-  .hero { grid-template-columns: 1fr; }
-  .hero-right { display: none; }
-  .about, .contact { padding: 80px 24px; grid-template-columns: 1fr; }
+
+  /* ── Hero: show artwork as background on mobile ── */
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: 100svh;
+    position: relative;
+  }
+  .hero-right {
+    display: block;
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+  .hero-image-overlay {
+    background: linear-gradient(to top, var(--paper) 0%, rgba(245,240,232,0.55) 50%, transparent 100%);
+  }
+  .hero-left {
+    position: relative;
+    z-index: 2;
+    padding: 0 24px 64px;
+    justify-content: flex-end;
+    min-height: 100svh;
+  }
+  .hero-title {
+    font-size: clamp(3.2rem, 14vw, 5rem);
+  }
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 36px;
+    max-width: 100%;
+  }
+  .hero-eyebrow { margin-bottom: 16px; }
+  .hero-scroll-indicator { left: 24px; bottom: 24px; }
+
+  /* ── About ── */
+  .about { padding: 64px 24px; grid-template-columns: 1fr; gap: 40px; }
   .about-left { position: static; }
-  .works-header { padding: 0 24px; flex-direction: column; align-items: flex-start; gap: 32px; }
-  .gallery-masonry { columns: 2; }
-  .series { padding: 80px 24px; }
-  .series-grid { grid-template-columns: 1fr; }
-  .awards-grid { grid-template-columns: 1fr; }
+  .about-name { font-size: 2.6rem; }
+  .about-text { font-size: 1.15rem; line-height: 1.7; margin-bottom: 24px; }
+  .about-text-small { font-size: 0.78rem; line-height: 1.85; }
+  .awards-grid { grid-template-columns: 1fr; margin-top: 36px; }
+
+  /* ── Works ── */
+  .works { padding: 64px 0; }
+  .works-header { padding: 0 24px; flex-direction: column; align-items: flex-start; gap: 24px; }
+  .gallery-masonry { columns: 1; padding: 0 16px; column-gap: 0; }
+
+  /* ── Series ── */
+  .series { padding: 64px 24px; }
+  .series-grid { grid-template-columns: 1fr; gap: 0; }
+
+  /* ── Contact ── */
+  .contact { padding: 64px 24px; grid-template-columns: 1fr; }
+
   footer { flex-direction: column; gap: 16px; text-align: center; padding: 32px 24px; }
+}
+
+@media (max-width: 480px) {
+  .hero-title { font-size: clamp(2.8rem, 16vw, 4rem); }
+  .hero-subtitle { font-size: 0.95rem; }
+  .about-text { font-size: 1.05rem; }
+  .about-name { font-size: 2.2rem; }
+  .contact-title { font-size: 2rem; }
+  .works-title { font-size: 2.4rem; }
 }
