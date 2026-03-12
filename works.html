@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yang Jianbo — Artwork Catalogue</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', 'PingFang SC', sans-serif; font-size: 12px; background: #f8f5f0; color: #2a2a28; padding: 32px; }
+
+  /* ── Top bar ── */
+  .topbar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; flex-wrap: wrap; gap: 12px; }
+  .topbar-left h1 { font-size: 18px; font-weight: 600; color: #1a1a18; }
+  .topbar-left .zh { font-size: 14px; color: #c9a96e; margin-left: 8px; }
+  .topbar-left .subtitle { font-size: 11px; color: #999; margin-top: 2px; }
+  .topbar-right { display: flex; gap: 8px; }
+  button { border: none; border-radius: 4px; padding: 7px 14px; font-size: 11px; cursor: pointer; font-family: inherit; font-weight: 500; transition: opacity 0.15s; }
+  button:hover { opacity: 0.85; }
+  .btn-save    { background: #1a1a18; color: #c9a96e; }
+  .btn-export  { background: #c9a96e; color: #1a1a18; }
+  .btn-addrow  { background: #e8f0e8; color: #2a5a2a; }
+  .saved-msg { font-size: 11px; color: #5a9a5a; opacity: 0; transition: opacity 0.4s; align-self: center; }
+  .saved-msg.show { opacity: 1; }
+
+  /* ── Table ── */
+  .table-wrap { overflow-x: auto; border-radius: 6px; box-shadow: 0 1px 8px rgba(0,0,0,0.09); }
+  table { width: 100%; border-collapse: collapse; background: #fff; min-width: 900px; }
+  thead tr { background: #1a1a18; }
+  th { color: #c9a96e; font-size: 10px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 9px 10px; text-align: left; white-space: nowrap; user-select: none; }
+  th.num { text-align: center; width: 32px; }
+  th.price { text-align: right; }
+  th.del { width: 28px; }
+
+  tbody tr:nth-child(odd)  { background: #f5efe6; }
+  tbody tr:nth-child(even) { background: #eef2f5; }
+  tbody tr:hover { background: #ede0ce; }
+  td { padding: 0; border-bottom: 1px solid #e8e0d8; vertical-align: middle; font-size: 11px; }
+  td.num { text-align: center; color: #bbb; padding: 6px 4px; width: 32px; }
+  td.price { text-align: right; }
+  td.thumb-cell { width: 92px; padding: 4px 6px; }
+
+  /* Editable cells */
+  td[contenteditable] {
+    padding: 6px 10px;
+    outline: none;
+    cursor: text;
+    min-width: 60px;
+  }
+  td[contenteditable]:focus {
+    background: #fffbe6 !important;
+    box-shadow: inset 0 0 0 2px #c9a96e;
+    border-radius: 2px;
+    position: relative;
+    z-index: 1;
+  }
+  td.price[contenteditable] { text-align: right; }
+
+  /* Thumbnail */
+  img.thumb { width: 80px; height: 60px; object-fit: cover; border-radius: 3px; display: block; }
+
+  /* Type badge */
+  .tag { border-radius: 3px; padding: 2px 7px; font-size: 10px; font-weight: 500; white-space: nowrap; cursor: pointer; user-select: none; }
+  .tag-oil  { background: #c9a96e28; color: #7a5520; }
+  .tag-draw { background: #6e9ec928; color: #1e5080; }
+
+  /* Delete button */
+  .del-btn { background: none; border: none; color: #ccc; font-size: 14px; cursor: pointer; padding: 4px 6px; line-height: 1; border-radius: 3px; }
+  .del-btn:hover { color: #e05050; background: #fff0f0; }
+
+  /* Price display */
+  td.price[contenteditable] { font-variant-numeric: tabular-nums; color: #5a3e10; font-weight: 500; }
+
+  /* ── Summary cards ── */
+  .summary { margin-top: 24px; display: flex; gap: 10px; flex-wrap: wrap; }
+  .summary-card { background: #1a1a18; color: #c9a96e; border-radius: 5px; padding: 11px 18px; min-width: 100px; }
+  .summary-card .val { font-size: 20px; font-weight: 700; }
+  .summary-card .lbl { font-size: 10px; opacity: 0.65; margin-top: 2px; }
+
+  /* ── Hint ── */
+  .hint { font-size: 10px; color: #bbb; margin-bottom: 10px; }
+  .hint b { color: #c9a96e; }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-left">
+    <div><h1 style="display:inline">Yang Jianbo</h1><span class="zh">杨剑波</span></div>
+    <div class="subtitle">Artwork Catalogue · Yunnan University · 2025</div>
+  </div>
+  <div class="topbar-right">
+    <button class="btn-addrow" onclick="addRow()">＋ Add Work</button>
+    <button class="btn-save" onclick="saveData()">💾 Save</button>
+    <button class="btn-export" onclick="exportCSV()">↓ Export CSV</button>
+    <span class="saved-msg" id="saved-msg">Saved ✓</span>
+  </div>
+</div>
+
+<div class="hint">Click any cell to edit &nbsp;·&nbsp; <b>Type</b> column click to toggle Oil/Drawing &nbsp;·&nbsp; Press <b>Tab</b> to move between cells &nbsp;·&nbsp; Changes auto-saved in browser</div>
+
+<div class="table-wrap">
+<table id="works-table">
+  <thead>
+    <tr>
+      <th class="num">#</th>
+      <th style="width:92px">Preview</th>
+      <th style="min-width:140px">Title</th>
+      <th style="min-width:90px">中文名</th>
+      <th style="min-width:120px">Medium</th>
+      <th style="width:55px">Year</th>
+      <th style="width:80px">Type</th>
+      <th style="width:110px">Size</th>
+      <th class="price" style="width:110px">Price (CNY ¥)</th>
+      <th class="price" style="width:110px">Price (USD $)</th>
+      <th style="min-width:110px">Collection</th>
+      <th style="min-width:120px">Notes</th>
+      <th class="del"></th>
+    </tr>
+  </thead>
+  <tbody id="tbody"></tbody>
+</table>
+</div>
+
+<div class="summary" id="summary"></div>
+
+<script>
+// ── Default data ──────────────────────────────────────────────────
+const DEFAULT_WORKS = [
+  { src:"art-portfolio/10.jpg", title:"Pasture",                            zh:"牧场",    medium:"Oil on Canvas",   year:"2024", type:"oil", size:"200×230 cm", cny:"160000", usd:"",      collection:"", notes:"" },
+  { src:"art-portfolio/3.jpg",  title:"Seagulls in Flight",                 zh:"",        medium:"Pencil on Paper", year:"2021", type:"draw",size:"",           cny:"",       usd:"",      collection:"", notes:"" },
+  { src:"art-portfolio/14.jpg", title:"The Wanderer",                        zh:"",        medium:"Oil on Canvas",   year:"2019", type:"oil", size:"",           cny:"",       usd:"",      collection:"", notes:"" },
+  { src:"art-portfolio/8.jpg",  title:"Whales Over the Mountains",           zh:"",        medium:"Pencil on Paper", year:"2018", type:"draw",size:"",           cny:"",       usd:"",      collection:"", notes:"" },
+  { src:"art-portfolio/11.jpg", title:"Herdsman",                            zh:"瓦扎和牛",medium:"Oil on Canvas",   year:"—",    type:"oil", size:"200×180 cm", cny:"120000", usd:"",      collection:"", notes:"" },
+  { src:"art-portfolio/5.jpg",  title:"Gulls and Peaks",                     zh:"",        medium:"Pencil on Paper", year:"2021", type:"draw",size:"",           cny:"",       usd:"",      collection:"", notes:"" },
+  { src:"art-portfolio/12.jpg", title:"Plateau Herd",                        zh:"",        medium:"Oil on Canvas",   year:"—",    type:"oil", size:"",           cny:"",       usd:"",      collection:"", notes:"" },
+  { src:"art-portfolio/4.jpg",  title:"Rest at the Clifftop",               zh:"",        medium:"Pencil on Paper", year:"2021", type:"draw",size:"",           cny:"",       usd:"",      collection:"", notes:"" },
+  { src:"art-portfolio/16.jpg", title:"Among the Flock",                    zh:"",        medium:"Oil on Canvas",   year:"2019", type:"oil", size:"",           cny:"",       usd:"",      collection:"", notes:"" },
+  { src:"art-portfolio/7.jpg",  title:"The Departure",                      zh:"",        medium:"Pencil on Paper", year:"2021", type:"draw",size:"",           cny:"",       usd:"",      collection:"", notes:"" },
+  { src:"art-portfolio/9.jpg",  title:"The Shepherd and the Blue Mountain", zh:"",        medium:"Oil on Canvas",   year:"2019", type:"oil", size:"",           cny:"",       usd:"",      collection:"", notes:"" },
+  { src:"art-portfolio/6.jpg",  title:"Glacier Gathering",                  zh:"",        medium:"Pencil on Paper", year:"—",    type:"draw",size:"",           cny:"",       usd:"",      collection:"", notes:"" },
+  { src:"art-portfolio/13.jpg", title:"The White Coat",                     zh:"",        medium:"Oil on Canvas",   year:"—",    type:"oil", size:"",           cny:"",       usd:"",      collection:"", notes:"" },
+  { src:"art-portfolio/2.jpg",  title:"Shore Birds",                        zh:"",        medium:"Pencil on Paper", year:"2021", type:"draw",size:"",           cny:"",       usd:"",      collection:"", notes:"" },
+  { src:"art-portfolio/15.jpg", title:"The Shepherd",                       zh:"",        medium:"Oil on Canvas",   year:"—",    type:"oil", size:"",           cny:"",       usd:"",      collection:"", notes:"" },
+  { src:"art-portfolio/1.jpg",  title:"Mountain Passage",                   zh:"",        medium:"Pencil on Paper", year:"2018", type:"draw",size:"",           cny:"",       usd:"",      collection:"", notes:"" },
+];
+
+// ── Thumb cell HTML ───────────────────────────────────────────────
+function thumbCell(src, title) {
+  if (src) return `<img class="thumb" src="${src}" alt="${title}" onerror="this.style.display='none'">`;
+  return '';
+}
+
+// ── Load from localStorage or defaults ───────────────────────────
+function loadData() {
+  try {
+    const saved = localStorage.getItem('yangjianbo_works');
+    return saved ? JSON.parse(saved) : DEFAULT_WORKS;
+  } catch(e) { return DEFAULT_WORKS; }
+}
+
+let works = loadData();
+
+// ── Render ────────────────────────────────────────────────────────
+function render() {
+  const tbody = document.getElementById('tbody');
+  tbody.innerHTML = '';
+  works.forEach((w, i) => {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td class="num">${i + 1}</td>
+      <td class="thumb-cell">${thumbCell(w.src, w.title)}</td>
+      <td contenteditable="true" data-field="title">${w.title}</td>
+      <td contenteditable="true" data-field="zh">${w.zh}</td>
+      <td contenteditable="true" data-field="medium">${w.medium}</td>
+      <td contenteditable="true" data-field="year">${w.year}</td>
+      <td data-field="type" data-idx="${i}" onclick="toggleType(${i}, this)" style="cursor:pointer;padding:6px 10px;">
+        ${typeBadge(w.type)}
+      </td>
+      <td contenteditable="true" data-field="size">${w.size}</td>
+      <td contenteditable="true" class="price" data-field="cny">${formatPrice(w.cny, '¥')}</td>
+      <td contenteditable="true" class="price" data-field="usd">${formatPrice(w.usd, '$')}</td>
+      <td contenteditable="true" data-field="collection">${w.collection}</td>
+      <td contenteditable="true" data-field="notes">${w.notes}</td>
+      <td><button class="del-btn" onclick="deleteRow(${i})" title="Delete">×</button></td>
+    `;
+    // Bind edits
+    tr.querySelectorAll('[contenteditable]').forEach(cell => {
+      cell.addEventListener('blur', () => {
+        const field = cell.dataset.field;
+        let val = cell.innerText.trim();
+        // Strip currency symbols before saving
+        if (field === 'cny') val = val.replace(/[¥,]/g, '');
+        if (field === 'usd') val = val.replace(/[$,]/g, '');
+        works[i][field] = val;
+        if (field === 'cny' || field === 'usd') {
+          cell.innerText = formatPrice(val, field === 'cny' ? '¥' : '$');
+        }
+        autoSave();
+      });
+      // Tab key navigation
+      cell.addEventListener('keydown', e => {
+        if (e.key === 'Enter') { e.preventDefault(); cell.blur(); }
+        if (e.key === 'Tab') {
+          e.preventDefault();
+          const cells = [...document.querySelectorAll('[contenteditable]')];
+          const idx = cells.indexOf(cell);
+          const next = cells[e.shiftKey ? idx - 1 : idx + 1];
+          if (next) { next.focus(); selectAll(next); }
+        }
+      });
+      cell.addEventListener('focus', () => selectAll(cell));
+    });
+    tbody.appendChild(tr);
+  });
+  updateSummary();
+}
+
+function selectAll(el) {
+  const range = document.createRange();
+  range.selectNodeContents(el);
+  const sel = window.getSelection();
+  sel.removeAllRanges();
+  sel.addRange(range);
+}
+
+function typeBadge(type) {
+  return type === 'oil'
+    ? '<span class="tag tag-oil">Oil</span>'
+    : '<span class="tag tag-draw">Drawing</span>';
+}
+
+function formatPrice(val, symbol) {
+  if (!val || val === '' || val === '—') return '';
+  const n = parseFloat(String(val).replace(/[^0-9.]/g, ''));
+  if (isNaN(n)) return val;
+  if (symbol === '¥') return '¥' + n.toLocaleString('en-US');
+  if (symbol === '$') return '$' + n.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2});
+  return val;
+}
+
+// ── Toggle type ───────────────────────────────────────────────────
+function toggleType(i, td) {
+  works[i].type = works[i].type === 'oil' ? 'draw' : 'oil';
+  td.innerHTML = typeBadge(works[i].type);
+  autoSave();
+}
+
+// ── Add row ───────────────────────────────────────────────────────
+function addRow() {
+  works.push({ src:"", title:"New Work", zh:"", medium:"Oil on Canvas", year:"", type:"oil", size:"", cny:"", usd:"", collection:"", notes:"" });
+  render();
+  // Focus the title of the new row
+  const cells = document.querySelectorAll('[data-field="title"]');
+  const last = cells[cells.length - 1];
+  if (last) { last.focus(); selectAll(last); }
+}
+
+// ── Delete row ────────────────────────────────────────────────────
+function deleteRow(i) {
+  if (!confirm(`Delete "${works[i].title}"?`)) return;
+  works.splice(i, 1);
+  render();
+  autoSave();
+}
+
+// ── Save ──────────────────────────────────────────────────────────
+function autoSave() {
+  localStorage.setItem('yangjianbo_works', JSON.stringify(works));
+}
+
+function saveData() {
+  autoSave();
+  const msg = document.getElementById('saved-msg');
+  msg.classList.add('show');
+  setTimeout(() => msg.classList.remove('show'), 2000);
+}
+
+// ── Export CSV ────────────────────────────────────────────────────
+function exportCSV() {
+  const headers = ['#','Title','中文名','Medium','Year','Type','Size','Price CNY','Price USD','Collection','Notes','Image'];
+  const rows = works.map((w, i) => [
+    i+1, w.title, w.zh, w.medium, w.year,
+    w.type === 'oil' ? 'Oil Painting' : 'Drawing',
+    w.size, w.cny, w.usd, w.collection, w.notes, w.src
+  ].map(v => `"${String(v).replace(/"/g,'""')}"`).join(','));
+
+  const csv = [headers.join(','), ...rows].join('\n');
+  const blob = new Blob(['\uFEFF' + csv], { type: 'text/csv;charset=utf-8;' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'yang_jianbo_works.csv';
+  a.click();
+}
+
+// ── Summary ───────────────────────────────────────────────────────
+function updateSummary() {
+  const oil   = works.filter(w => w.type === 'oil').length;
+  const draw  = works.filter(w => w.type === 'draw').length;
+  const priced = works.filter(w => w.cny && w.cny !== '').length;
+  document.getElementById('summary').innerHTML = `
+    <div class="summary-card"><div class="val">${works.length}</div><div class="lbl">Total Works</div></div>
+    <div class="summary-card"><div class="val">${oil}</div><div class="lbl">Oil Paintings</div></div>
+    <div class="summary-card"><div class="val">${draw}</div><div class="lbl">Drawings</div></div>
+    <div class="summary-card"><div class="val">${priced}</div><div class="lbl">Priced Works</div></div>
+  `;
+}
+
+render();
+</script>
+</body>
+</html>
