@@ -304,12 +304,13 @@
 <div class="lightbox" id="lightbox">
   <button class="lightbox-close" onclick="closeLightbox()">Close ✕</button>
   <button class="lightbox-nav lightbox-prev" onclick="navigateLightbox(-1)">&#8249;</button>
-  <img class="lightbox-img" id="lightbox-img" src="" alt="">
+  <canvas id="lightbox-canvas"></canvas>
   <button class="lightbox-nav lightbox-next" onclick="navigateLightbox(1)">&#8250;</button>
   <div class="lightbox-caption" id="lightbox-caption"></div>
 </div>
 
 <script>
+// ── Works data ────────────────────────────────────────────────────
 const works = [
   { src: "art-portfolio/10.jpg", title: "Tibetan Festival", year: "Oil on Canvas · 2024", type: "oil" },
   { src: "art-portfolio/3.jpg", title: "Seagulls in Flight", year: "Pencil on Paper · 2021", type: "drawing" },
@@ -329,7 +330,94 @@ const works = [
   { src: "art-portfolio/1.jpg", title: "Mountain Passage", year: "Pencil on Paper · 2018", type: "drawing" },
 ];
 
+// ── Image protection: disable right-click & keyboard shortcuts ────
+document.addEventListener('contextmenu', e => {
+  if (e.target.tagName === 'IMG' || e.target.tagName === 'CANVAS' ||
+      e.target.closest('.gallery-item') || e.target.closest('.lightbox')) {
+    e.preventDefault();
+  }
+});
 
+document.addEventListener('keydown', e => {
+  const ctrl = e.ctrlKey || e.metaKey;
+  // Block save, view-source, print
+  if (ctrl && ['s','u','p'].includes(e.key.toLowerCase())) e.preventDefault();
+  // Block devtools shortcut
+  if (e.key === 'F12') e.preventDefault();
+  // Lightbox navigation
+  if (e.key === 'Escape') closeLightbox();
+  if (e.key === 'ArrowRight') navigateLightbox(1);
+  if (e.key === 'ArrowLeft') navigateLightbox(-1);
+});
+
+// ── Watermark helper ──────────────────────────────────────────────
+function drawWatermark(canvas, img) {
+  canvas.width  = img.naturalWidth  || img.width;
+  canvas.height = img.naturalHeight || img.height;
+  const ctx = canvas.getContext('2d');
+  ctx.drawImage(img, 0, 0);
+
+  const w = canvas.width, h = canvas.height;
+  const text = '© Yang Jianbo · yangjianbo.art';
+
+  // Tiled diagonal watermarks — dark layer for light images, light layer for dark images
+  const fontSize = Math.max(14, w * 0.022);
+  ctx.save();
+  ctx.font = `${fontSize}px sans-serif`;
+  ctx.textAlign = 'center';
+  ctx.translate(w / 2, h / 2);
+  ctx.rotate(-Math.PI / 5);
+  const step = Math.max(160, w * 0.28);
+  // Dark text (visible on white/light backgrounds)
+  ctx.fillStyle = 'rgba(0,0,0,0.22)';
+  for (let y = -h; y < h; y += step * 0.7) {
+    for (let x = -w; x < w; x += step) {
+      ctx.fillText(text, x, y);
+    }
+  }
+  // White text (visible on dark/color backgrounds)
+  ctx.fillStyle = 'rgba(255,255,255,0.32)';
+  for (let y = -h; y < h; y += step * 0.7) {
+    for (let x = -w; x < w; x += step) {
+      ctx.fillText(text, x, y);
+    }
+  }
+  ctx.restore();
+
+  // Corner mark
+  ctx.save();
+  ctx.font = `${Math.max(12, w * 0.018)}px sans-serif`;
+  ctx.textAlign = 'right';
+  // Dark shadow for light backgrounds
+  ctx.fillStyle = 'rgba(0,0,0,0.35)';
+  ctx.fillText('© Yang Jianbo', w - 11, h - 11);
+  // Light text on top
+  ctx.fillStyle = 'rgba(255,255,255,0.6)';
+  ctx.fillText('© Yang Jianbo', w - 12, h - 12);
+  ctx.restore();
+}
+
+// ── Apply watermark to all gallery thumbnails ─────────────────────
+document.querySelectorAll('.gallery-item img').forEach(img => {
+  const canvas = document.createElement('canvas');
+  canvas.style.cssText = img.style.cssText;
+  canvas.style.width  = '100%';
+  canvas.style.height = '100%';
+  canvas.style.objectFit = 'cover';
+  canvas.style.display = 'block';
+  canvas.style.pointerEvents = 'none';
+  canvas.setAttribute('draggable', 'false');
+
+  function applyWM() {
+    drawWatermark(canvas, img);
+    img.parentNode.insertBefore(canvas, img);
+    img.style.display = 'none';
+  }
+  if (img.complete && img.naturalWidth) { applyWM(); }
+  else { img.addEventListener('load', applyWM); }
+});
+
+// ── Lightbox ──────────────────────────────────────────────────────
 let currentIndex = 0;
 
 function openLightbox(index) {
@@ -351,24 +439,32 @@ function navigateLightbox(dir) {
 
 function updateLightbox() {
   const w = works[currentIndex];
-  document.getElementById('lightbox-img').src = w.src;
+  const canvas = document.getElementById('lightbox-canvas');
   document.getElementById('lightbox-caption').textContent = w.title + '  ·  ' + w.year;
+
+  const img = new Image();
+  img.crossOrigin = 'anonymous';
+  img.onload = () => {
+    // Size canvas to fit viewport while preserving aspect ratio
+    const maxW = window.innerWidth  * 0.9;
+    const maxH = window.innerHeight * 0.8;
+    const ratio = Math.min(maxW / img.naturalWidth, maxH / img.naturalHeight, 1);
+    canvas.style.width  = Math.round(img.naturalWidth  * ratio) + 'px';
+    canvas.style.height = Math.round(img.naturalHeight * ratio) + 'px';
+    drawWatermark(canvas, img);
+  };
+  img.src = w.src;
 }
 
 document.getElementById('lightbox').addEventListener('click', function(e) {
   if (e.target === this) closeLightbox();
 });
 
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') closeLightbox();
-  if (e.key === 'ArrowRight') navigateLightbox(1);
-  if (e.key === 'ArrowLeft') navigateLightbox(-1);
-});
-
+// ── Filter ────────────────────────────────────────────────────────
 function filterWorks(type, btn) {
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
-  document.querySelectorAll('.gallery-item').forEach((item, i) => {
+  document.querySelectorAll('.gallery-item').forEach(item => {
     if (type === 'all' || item.dataset.type === type) {
       item.style.display = '';
       item.style.opacity = '0';
@@ -379,6 +475,7 @@ function filterWorks(type, btn) {
   });
 }
 
+// ── Scroll reveal ─────────────────────────────────────────────────
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) entry.target.classList.add('visible');

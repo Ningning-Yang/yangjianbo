@@ -6,6 +6,37 @@
   --light: #e8e0d0;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* ── Image protection ── */
+img {
+  -webkit-user-drag: none;
+  user-drag: none;
+  -webkit-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+.gallery-item, .hero-image-container, .lightbox-canvas-wrap {
+  -webkit-user-select: none;
+  user-select: none;
+  position: relative;
+}
+/* Transparent overlay blocks drag/touch-save on the gallery cards */
+.gallery-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+/* Lightbox canvas */
+#lightbox-canvas {
+  max-width: 90vw;
+  max-height: 80vh;
+  display: block;
+  pointer-events: none;
+  -webkit-user-drag: none;
+  user-drag: none;
+}
 html { scroll-behavior: smooth; }
 body {
   background: var(--paper);
@@ -523,7 +554,6 @@ footer {
 
   /* ── Contact ── */
   .contact { padding: 64px 24px; grid-template-columns: 1fr; }
-
   footer { flex-direction: column; gap: 16px; text-align: center; padding: 32px 24px; }
 }
 
