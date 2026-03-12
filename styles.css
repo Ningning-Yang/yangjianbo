@@ -455,6 +455,22 @@ footer {
   nav { padding: 20px 24px; }
   .nav-links { display: none; }
 
+  /* ── Global: heavier font weight on mobile for readability ── */
+  body { font-weight: 400; }
+  .about-text { font-weight: 400; color: rgba(245,240,232,0.95); }
+  .about-text-small { font-weight: 300; color: rgba(245,240,232,0.75); letter-spacing: 0.01em; }
+  .about-meta { font-weight: 400; letter-spacing: 0.08em; }
+  .series-desc { font-weight: 400; }
+  .contact-text { font-weight: 400; }
+  .award-text { font-weight: 400; }
+  .hero-subtitle { font-weight: 400; color: var(--muted); }
+
+  /* ── Hero title: darken italic JIANBO so it reads over the image ── */
+  .hero-title em {
+    color: #1a1a18;
+    text-shadow: 0 2px 16px rgba(245,240,232,0.7);
+  }
+
   /* ── Hero: show artwork as background on mobile ── */
   .hero {
     grid-template-columns: 1fr;
