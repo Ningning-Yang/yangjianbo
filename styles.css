@@ -30,8 +30,8 @@ img {
 }
 /* Lightbox canvas */
 #lightbox-canvas {
-  max-width: 90vw;
-  max-height: 80vh;
+  max-width: 96vw;
+  max-height: 78vh;
   display: block;
   pointer-events: none;
   -webkit-user-drag: none;
@@ -555,6 +555,17 @@ footer {
   /* ── Contact ── */
   .contact { padding: 64px 24px; grid-template-columns: 1fr; }
   footer { flex-direction: column; gap: 16px; text-align: center; padding: 32px 24px; }
+
+  /* ── Lightbox: move nav to bottom, full-width image ── */
+  .lightbox-nav {
+    top: auto;
+    bottom: 24px;
+    transform: none;
+  }
+  .lightbox-prev { left: 24px; }
+  .lightbox-next { right: 24px; }
+  .lightbox-caption { bottom: 72px; width: 90vw; }
+  .lightbox-close { top: 16px; right: 16px; }
 }
 
 @media (max-width: 480px) {

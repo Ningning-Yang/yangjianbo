@@ -134,14 +134,17 @@ function updateLightbox() {
   const img = new Image();
   img.crossOrigin = 'anonymous';
   img.onload = () => {
-    const maxW = window.innerWidth  * 0.9;
-    const maxH = window.innerHeight * 0.8;
+    const mobile = window.innerWidth < 900;
+    const maxW = window.innerWidth  * (mobile ? 0.96 : 0.9);
+    const maxH = window.innerHeight * (mobile ? 0.78 : 0.8);
     const ratio = Math.min(maxW / img.naturalWidth, maxH / img.naturalHeight, 1);
     const dispW = Math.round(img.naturalWidth  * ratio);
     const dispH = Math.round(img.naturalHeight * ratio);
     canvas.style.width  = dispW + 'px';
     canvas.style.height = dispH + 'px';
-    drawWatermark(canvas, img, dispW, dispH);
+    // Draw buffer at up to 2400px on longest side — far sharper than display-size-only
+    const qualScale = Math.min(1, 2400 / Math.max(img.naturalWidth, img.naturalHeight, 1));
+    drawWatermark(canvas, img, Math.round(img.naturalWidth * qualScale), Math.round(img.naturalHeight * qualScale));
   };
   img.src = w.src;
 }
