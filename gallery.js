@@ -41,11 +41,20 @@ function filterWorks(type, btn) {
 }
 
 // ── Watermark helper ──────────────────────────────────────────────
-function drawWatermark(canvas, img, w, h) {
-  canvas.width  = w || img.naturalWidth  || img.width;
-  canvas.height = h || img.naturalHeight || img.height;
+// canvasW/canvasH: explicit pixel dimensions (lightbox). Omit for thumbnails — caps at 1200px.
+function drawWatermark(canvas, img, canvasW, canvasH) {
+  if (canvasW && canvasH) {
+    canvas.width  = canvasW;
+    canvas.height = canvasH;
+  } else {
+    const nw = img.naturalWidth  || img.width;
+    const nh = img.naturalHeight || img.height;
+    const scale = Math.min(1, 1200 / Math.max(nw, nh, 1));
+    canvas.width  = Math.round(nw * scale);
+    canvas.height = Math.round(nh * scale);
+  }
   const ctx = canvas.getContext('2d');
-  ctx.drawImage(img, 0, 0);
+  ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
 
   const w = canvas.width, h = canvas.height;
   const text = '© Yang Jianbo · yangjianbo.art';
@@ -87,9 +96,7 @@ function applyWatermarks() {
     canvas.style.pointerEvents = 'none';
     canvas.setAttribute('draggable', 'false');
     function applyWM() {
-      const dw = img.offsetWidth  || img.naturalWidth;
-      const dh = img.offsetHeight || img.naturalHeight;
-      drawWatermark(canvas, img, dw, dh);
+      drawWatermark(canvas, img);
       img.parentNode.insertBefore(canvas, img);
       img.style.display = 'none';
     }
