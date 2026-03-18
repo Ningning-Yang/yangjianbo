@@ -41,9 +41,9 @@ function filterWorks(type, btn) {
 }
 
 // ── Watermark helper ──────────────────────────────────────────────
-function drawWatermark(canvas, img) {
-  canvas.width  = img.naturalWidth  || img.width;
-  canvas.height = img.naturalHeight || img.height;
+function drawWatermark(canvas, img, w, h) {
+  canvas.width  = w || img.naturalWidth  || img.width;
+  canvas.height = h || img.naturalHeight || img.height;
   const ctx = canvas.getContext('2d');
   ctx.drawImage(img, 0, 0);
 
@@ -81,14 +81,15 @@ function drawWatermark(canvas, img) {
 function applyWatermarks() {
   document.querySelectorAll('.gallery-item img').forEach(img => {
     const canvas = document.createElement('canvas');
-    canvas.style.width  = '100%';
-    canvas.style.height = '100%';
-    canvas.style.objectFit = 'cover';
+    canvas.style.width   = '100%';
+    canvas.style.height  = 'auto';
     canvas.style.display = 'block';
     canvas.style.pointerEvents = 'none';
     canvas.setAttribute('draggable', 'false');
     function applyWM() {
-      drawWatermark(canvas, img);
+      const dw = img.offsetWidth  || img.naturalWidth;
+      const dh = img.offsetHeight || img.naturalHeight;
+      drawWatermark(canvas, img, dw, dh);
       img.parentNode.insertBefore(canvas, img);
       img.style.display = 'none';
     }
@@ -129,9 +130,11 @@ function updateLightbox() {
     const maxW = window.innerWidth  * 0.9;
     const maxH = window.innerHeight * 0.8;
     const ratio = Math.min(maxW / img.naturalWidth, maxH / img.naturalHeight, 1);
-    canvas.style.width  = Math.round(img.naturalWidth  * ratio) + 'px';
-    canvas.style.height = Math.round(img.naturalHeight * ratio) + 'px';
-    drawWatermark(canvas, img);
+    const dispW = Math.round(img.naturalWidth  * ratio);
+    const dispH = Math.round(img.naturalHeight * ratio);
+    canvas.style.width  = dispW + 'px';
+    canvas.style.height = dispH + 'px';
+    drawWatermark(canvas, img, dispW, dispH);
   };
   img.src = w.src;
 }
