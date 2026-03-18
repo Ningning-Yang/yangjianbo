@@ -20,6 +20,7 @@
   .btn-save    { background: #1a1a18; color: #c9a96e; }
   .btn-export  { background: #c9a96e; color: #1a1a18; }
   .btn-addrow  { background: #e8f0e8; color: #2a5a2a; }
+  .btn-reset   { background: #f0e8e8; color: #8a3030; }
   .saved-msg { font-size: 11px; color: #5a9a5a; opacity: 0; transition: opacity 0.4s; align-self: center; }
   .saved-msg.show { opacity: 1; }
 
@@ -61,12 +62,13 @@
 
   /* Type badge */
   .tag { border-radius: 3px; padding: 2px 7px; font-size: 10px; font-weight: 500; white-space: nowrap; cursor: pointer; user-select: none; }
-  .tag-oil  { background: #c9a96e28; color: #7a5520; }
-  .tag-draw { background: #6e9ec928; color: #1e5080; }
+  .tag-oil   { background: #c9a96e28; color: #7a5520; }
+  .tag-draw  { background: #6e9ec928; color: #1e5080; }
+  .tag-water { background: #6ec9b028; color: #1e6050; }
 
   /* Delete button */
-  .del-btn { background: none; border: none; color: #ccc; font-size: 14px; cursor: pointer; padding: 4px 6px; line-height: 1; border-radius: 3px; }
-  .del-btn:hover { color: #e05050; background: #fff0f0; }
+  .del-btn { background: #fff0f0; border: 1px solid #f0d0d0; color: #c05050; font-size: 12px; cursor: pointer; padding: 3px 8px; line-height: 1; border-radius: 3px; font-weight: 500; }
+  .del-btn:hover { background: #e05050; color: #fff; border-color: #e05050; }
 
   /* Price display */
   td.price[contenteditable] { font-variant-numeric: tabular-nums; color: #5a3e10; font-weight: 500; }
@@ -93,6 +95,7 @@
     <button class="btn-addrow" onclick="addRow()">＋ Add Work</button>
     <button class="btn-save" onclick="saveData()">💾 Save</button>
     <button class="btn-export" onclick="exportCSV()">↓ Export CSV</button>
+    <button class="btn-reset" onclick="resetToDefaults()">↺ Reset</button>
     <span class="saved-msg" id="saved-msg">Saved ✓</span>
   </div>
 </div>
@@ -124,26 +127,9 @@
 
 <div class="summary" id="summary"></div>
 
+<script src="works-data.js"></script>
 <script>
-// ── Default data ──────────────────────────────────────────────────
-const DEFAULT_WORKS = [
-  { src:"art-portfolio/10.jpg", title:"Pasture",                            zh:"牧场",    medium:"Oil on Canvas",   year:"2024", type:"oil", size:"200×230 cm", cny:"160000", usd:"",      collection:"", notes:"" },
-  { src:"art-portfolio/3.jpg",  title:"Seagulls in Flight",                 zh:"",        medium:"Pencil on Paper", year:"2021", type:"draw",size:"",           cny:"",       usd:"",      collection:"", notes:"" },
-  { src:"art-portfolio/14.jpg", title:"The Wanderer",                        zh:"",        medium:"Oil on Canvas",   year:"2019", type:"oil", size:"",           cny:"",       usd:"",      collection:"", notes:"" },
-  { src:"art-portfolio/8.jpg",  title:"Whales Over the Mountains",           zh:"",        medium:"Pencil on Paper", year:"2018", type:"draw",size:"",           cny:"",       usd:"",      collection:"", notes:"" },
-  { src:"art-portfolio/11.jpg", title:"Herdsman",                            zh:"瓦扎和牛",medium:"Oil on Canvas",   year:"—",    type:"oil", size:"200×180 cm", cny:"120000", usd:"",      collection:"", notes:"" },
-  { src:"art-portfolio/5.jpg",  title:"Gulls and Peaks",                     zh:"",        medium:"Pencil on Paper", year:"2021", type:"draw",size:"",           cny:"",       usd:"",      collection:"", notes:"" },
-  { src:"art-portfolio/12.jpg", title:"Plateau Herd",                        zh:"",        medium:"Oil on Canvas",   year:"—",    type:"oil", size:"",           cny:"",       usd:"",      collection:"", notes:"" },
-  { src:"art-portfolio/4.jpg",  title:"Rest at the Clifftop",               zh:"",        medium:"Pencil on Paper", year:"2021", type:"draw",size:"",           cny:"",       usd:"",      collection:"", notes:"" },
-  { src:"art-portfolio/16.jpg", title:"Among the Flock",                    zh:"",        medium:"Oil on Canvas",   year:"2019", type:"oil", size:"",           cny:"",       usd:"",      collection:"", notes:"" },
-  { src:"art-portfolio/7.jpg",  title:"The Departure",                      zh:"",        medium:"Pencil on Paper", year:"2021", type:"draw",size:"",           cny:"",       usd:"",      collection:"", notes:"" },
-  { src:"art-portfolio/9.jpg",  title:"The Shepherd and the Blue Mountain", zh:"",        medium:"Oil on Canvas",   year:"2019", type:"oil", size:"",           cny:"",       usd:"",      collection:"", notes:"" },
-  { src:"art-portfolio/6.jpg",  title:"Glacier Gathering",                  zh:"",        medium:"Pencil on Paper", year:"—",    type:"draw",size:"",           cny:"",       usd:"",      collection:"", notes:"" },
-  { src:"art-portfolio/13.jpg", title:"The White Coat",                     zh:"",        medium:"Oil on Canvas",   year:"—",    type:"oil", size:"",           cny:"",       usd:"",      collection:"", notes:"" },
-  { src:"art-portfolio/2.jpg",  title:"Shore Birds",                        zh:"",        medium:"Pencil on Paper", year:"2021", type:"draw",size:"",           cny:"",       usd:"",      collection:"", notes:"" },
-  { src:"art-portfolio/15.jpg", title:"The Shepherd",                       zh:"",        medium:"Oil on Canvas",   year:"—",    type:"oil", size:"",           cny:"",       usd:"",      collection:"", notes:"" },
-  { src:"art-portfolio/1.jpg",  title:"Mountain Passage",                   zh:"",        medium:"Pencil on Paper", year:"2018", type:"draw",size:"",           cny:"",       usd:"",      collection:"", notes:"" },
-];
+// UI logic — to add/remove/edit works, edit works-data.js instead
 
 // ── Thumb cell HTML ───────────────────────────────────────────────
 function thumbCell(src, title) {
@@ -182,7 +168,7 @@ function render() {
       <td contenteditable="true" class="price" data-field="usd">${formatPrice(w.usd, '$')}</td>
       <td contenteditable="true" data-field="collection">${w.collection}</td>
       <td contenteditable="true" data-field="notes">${w.notes}</td>
-      <td><button class="del-btn" onclick="deleteRow(${i})" title="Delete">×</button></td>
+      <td><button class="del-btn" onclick="deleteRow(${i})">Delete</button></td>
     `;
     // Bind edits
     tr.querySelectorAll('[contenteditable]').forEach(cell => {
@@ -225,9 +211,9 @@ function selectAll(el) {
 }
 
 function typeBadge(type) {
-  return type === 'oil'
-    ? '<span class="tag tag-oil">Oil</span>'
-    : '<span class="tag tag-draw">Drawing</span>';
+  if (type === 'oil')        return '<span class="tag tag-oil">Oil</span>';
+  if (type === 'watercolor') return '<span class="tag tag-water">Watercolour</span>';
+  return '<span class="tag tag-draw">Drawing</span>';
 }
 
 function formatPrice(val, symbol) {
@@ -241,7 +227,8 @@ function formatPrice(val, symbol) {
 
 // ── Toggle type ───────────────────────────────────────────────────
 function toggleType(i, td) {
-  works[i].type = works[i].type === 'oil' ? 'draw' : 'oil';
+  const cycle = { 'oil': 'draw', 'draw': 'watercolor', 'watercolor': 'oil' };
+  works[i].type = cycle[works[i].type] || 'oil';
   td.innerHTML = typeBadge(works[i].type);
   autoSave();
 }
@@ -276,6 +263,14 @@ function saveData() {
   setTimeout(() => msg.classList.remove('show'), 2000);
 }
 
+// ── Reset to defaults ─────────────────────────────────────────────
+function resetToDefaults() {
+  if (!confirm('Reset table to default data? All saved changes will be lost.')) return;
+  localStorage.removeItem('yangjianbo_works');
+  works = JSON.parse(JSON.stringify(DEFAULT_WORKS));
+  render();
+}
+
 // ── Export CSV ────────────────────────────────────────────────────
 function exportCSV() {
   const headers = ['#','Title','中文名','Medium','Year','Type','Size','Price CNY','Price USD','Collection','Notes','Image'];
@@ -297,11 +292,13 @@ function exportCSV() {
 function updateSummary() {
   const oil   = works.filter(w => w.type === 'oil').length;
   const draw  = works.filter(w => w.type === 'draw').length;
+  const water = works.filter(w => w.type === 'watercolor').length;
   const priced = works.filter(w => w.cny && w.cny !== '').length;
   document.getElementById('summary').innerHTML = `
     <div class="summary-card"><div class="val">${works.length}</div><div class="lbl">Total Works</div></div>
     <div class="summary-card"><div class="val">${oil}</div><div class="lbl">Oil Paintings</div></div>
     <div class="summary-card"><div class="val">${draw}</div><div class="lbl">Drawings</div></div>
+    <div class="summary-card"><div class="val">${water}</div><div class="lbl">Watercolours</div></div>
     <div class="summary-card"><div class="val">${priced}</div><div class="lbl">Priced Works</div></div>
   `;
 }
