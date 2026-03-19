@@ -29,13 +29,14 @@ img {
   cursor: pointer;
 }
 /* Lightbox canvas */
-#lightbox-canvas {
+#lightbox-img {
   max-width: 96vw;
-  max-height: 78vh;
+  max-height: 82vh;
   display: block;
   pointer-events: none;
   -webkit-user-drag: none;
   user-drag: none;
+  object-fit: contain;
 }
 html { scroll-behavior: smooth; }
 body {
