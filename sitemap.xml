@@ -177,4 +177,45 @@
       <image:caption>Red Machine No.3 by Yang Jianbo. Watercolour Postcard, 2021.</image:caption>
     </image:image>
   </url>
+
+  <!-- Blog pages -->
+  <url>
+    <loc>https://yangjianbo.com/blog/</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yangjianbo.com/blog/tibetan-landscape-oil-painting.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://yangjianbo.com/art-portfolio/9.jpg</image:loc>
+      <image:title>The Shepherd and the Blue Mountain — Yang Jianbo, Oil on Canvas, 2019</image:title>
+      <image:caption>Featured image for essay: Painting the Tibetan Plateau: Light, Distance, and Silence</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yangjianbo.com/blog/contemporary-chinese-oil-painting.html</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://yangjianbo.com/art-portfolio/10.jpg</image:loc>
+      <image:title>Yang Jianbo — Oil on Canvas, Tibetan Series</image:title>
+      <image:caption>Featured image for essay: Between East and West: Contemporary Chinese Oil Painting</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yangjianbo.com/blog/yunnan-figure-painting.html</loc>
+    <lastmod>2026-01-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://yangjianbo.com/art-portfolio/14.jpg</image:loc>
+      <image:title>The Wanderer — Yang Jianbo, Oil on Canvas, 2019</image:title>
+      <image:caption>Featured image for essay: The Figure in the Landscape: Painting People of Yunnan and Tibet</image:caption>
+    </image:image>
+  </url>
 </urlset>

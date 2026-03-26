@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KQ1RSYF3QQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KQ1RSYF3QQ');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Primary SEO -->
+<title>Blog — Yang Jianbo | Chinese Art, Oil Painting & Tibetan Landscapes</title>
+<meta name="description" content="Writings by Yang Jianbo (杨剑波) on Chinese contemporary art, oil painting techniques, Tibetan and Yunnan landscapes, and the creative process behind his work.">
+<meta name="keywords" content="Yang Jianbo blog, Chinese oil painting, Tibetan landscape painting, contemporary Chinese art, oil painting techniques, Yunnan artist">
+<meta name="author" content="Yang Jianbo">
+<link rel="canonical" href="https://yangjianbo.com/blog/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yangjianbo.com/blog/">
+<meta property="og:title" content="Blog — Yang Jianbo | Chinese Art & Oil Painting">
+<meta property="og:description" content="Writings by Yang Jianbo on Chinese contemporary art, oil painting techniques, and Tibetan landscapes.">
+<meta property="og:image" content="https://yangjianbo.com/art-portfolio/10.jpg">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Yang Jianbo">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Blog — Yang Jianbo | Chinese Art & Oil Painting">
+<meta name="twitter:description" content="Writings on Chinese contemporary art, oil painting techniques, and Tibetan landscapes.">
+<meta name="twitter:image" content="https://yangjianbo.com/art-portfolio/10.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="apple-touch-icon" href="/favicon-192.png">
+
+<!-- JSON-LD Breadcrumb -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://yangjianbo.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://yangjianbo.com/blog/" }
+  ]
+}
+</script>
+
+<!-- JSON-LD Blog -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Yang Jianbo — Journal",
+  "url": "https://yangjianbo.com/blog/",
+  "description": "Writings on Chinese contemporary art, oil painting, and Tibetan landscapes by Yang Jianbo.",
+  "author": {
+    "@type": "Person",
+    "name": "Yang Jianbo",
+    "url": "https://yangjianbo.com"
+  }
+}
+</script>
+
+<style>
+/* Blog-specific styles */
+.blog-hero {
+  padding: 140px 80px 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.blog-hero-label {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--warm);
+  margin-bottom: 20px;
+}
+.blog-hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(48px, 6vw, 80px);
+  font-weight: 300;
+  line-height: 1.05;
+  color: var(--ink);
+  margin-bottom: 24px;
+}
+.blog-hero-desc {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.8;
+  max-width: 500px;
+}
+.blog-divider {
+  width: 100%;
+  height: 1px;
+  background: var(--light);
+  margin: 0 80px;
+  width: calc(100% - 160px);
+}
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 2px;
+  padding: 2px 80px 120px;
+  max-width: 1200px;
+  margin: 40px auto 0;
+}
+.blog-card {
+  background: var(--paper);
+  border: 1px solid var(--light);
+  padding: 40px;
+  transition: border-color 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.blog-card:hover {
+  border-color: var(--warm);
+}
+.blog-card-meta {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.blog-card-date {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.blog-card-tag {
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--warm);
+  border: 1px solid var(--warm);
+  padding: 2px 8px;
+}
+.blog-card-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: var(--ink);
+}
+.blog-card-excerpt {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.8;
+  flex: 1;
+}
+.blog-card-read {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+.blog-card-read::after {
+  content: '→';
+  transition: transform 0.2s;
+}
+.blog-card:hover .blog-card-read::after {
+  transform: translateX(4px);
+}
+.blog-card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  pointer-events: none;
+  -webkit-user-drag: none;
+  user-drag: none;
+  -webkit-user-select: none;
+  user-select: none;
+  margin-bottom: 8px;
+}
+@media (max-width: 900px) {
+  .blog-hero { padding: 120px 24px 56px; }
+  .blog-hero-title { font-size: 44px; }
+  .blog-grid { padding: 0 24px 80px; gap: 16px; grid-template-columns: 1fr; max-width: 600px; }
+  .blog-divider { margin: 0 24px; width: calc(100% - 48px); }
+  .blog-card { padding: 28px; }
+  .blog-card-img { height: 220px; }
+}
+@media (max-width: 480px) {
+  .blog-hero { padding: 100px 20px 48px; }
+  .blog-hero-title { font-size: 36px; }
+  .blog-hero-desc { font-size: 13px; }
+  .blog-grid { padding: 0 16px 64px; gap: 12px; max-width: 100%; }
+  .blog-card { padding: 22px; }
+  .blog-card-img { height: 180px; }
+  .blog-card-title { font-size: 20px; }
+  .blog-card-excerpt { font-size: 12px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">Yang Jianbo</a>
+  <ul class="nav-links">
+    <li><a href="/#works">Works</a></li>
+    <li><a href="/#about">About</a></li>
+    <li><a href="/#series">Series</a></li>
+    <li><a href="/blog/" style="opacity:1">Journal</a></li>
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
+  <button class="nav-hamburger" aria-label="Open menu" onclick="this.closest('nav').classList.toggle('menu-open')">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="blog-hero reveal">
+  <div class="blog-hero-label">— Journal</div>
+  <h1 class="blog-hero-title">Writings on<br><em>Art & Painting</em></h1>
+  <p class="blog-hero-desc">Reflections on Chinese contemporary art, oil painting methods, Tibetan and Yunnan landscapes, and the interior life of the studio.</p>
+</div>
+
+<div class="blog-divider"></div>
+
+<main class="blog-grid">
+
+  <a href="/blog/tibetan-landscape-oil-painting.html" class="blog-card reveal">
+    <img class="blog-card-img" src="/art-portfolio/9.jpg" alt="Tibetan Landscape Oil Painting by Yang Jianbo" style="object-position: center 80%;">
+    <div class="blog-card-meta">
+      <span class="blog-card-date">March 2026</span>
+      <span class="blog-card-tag">Technique</span>
+    </div>
+    <h2 class="blog-card-title">Painting the Tibetan Plateau: Light, Distance, and Silence</h2>
+    <p class="blog-card-excerpt">How the high-altitude light of the Tibetan plateau transforms the challenge of landscape painting — and what oil paint uniquely offers when rendering that vast, charged silence.</p>
+    <span class="blog-card-read">Read essay</span>
+  </a>
+
+  <a href="/blog/contemporary-chinese-oil-painting.html" class="blog-card reveal">
+    <img class="blog-card-img" src="/art-portfolio/10.jpg" alt="Contemporary Chinese Oil Painting" style="object-position: center 60%;">
+    <div class="blog-card-meta">
+      <span class="blog-card-date">February 2026</span>
+      <span class="blog-card-tag">Context</span>
+    </div>
+    <h2 class="blog-card-title">Between East and West: The Language of Contemporary Chinese Oil Painting</h2>
+    <p class="blog-card-excerpt">A reflection on how Chinese oil painters navigate the inheritance of Western technique alongside a deeply rooted visual culture — and what this creative tension produces.</p>
+    <span class="blog-card-read">Read essay</span>
+  </a>
+
+  <a href="/blog/yunnan-figure-painting.html" class="blog-card reveal">
+    <img class="blog-card-img" src="/art-portfolio/14.jpg" alt="Yunnan Figure Painting by Yang Jianbo" style="object-position: 30% 60%;">
+    <div class="blog-card-meta">
+      <span class="blog-card-date">January 2026</span>
+      <span class="blog-card-tag">Process</span>
+    </div>
+    <h2 class="blog-card-title">The Figure in the Landscape: Painting People of Yunnan and Tibet</h2>
+    <p class="blog-card-excerpt">Thoughts on depicting the human figure within expansive landscapes — how posture, scale, and gesture become the primary language when words cannot cross a cultural distance.</p>
+    <span class="blog-card-read">Read essay</span>
+  </a>
+
+</main>
+
+<footer>
+  <span>© 2026 Yang Jianbo. All Rights Reserved.</span>
+  <span>Yunnan · China</span>
+</footer>
+
+<script>
+// Reveal on scroll
+const revealEls = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.style.opacity = '1';
+      e.target.style.transform = 'translateY(0)';
+    }
+  });
+}, { threshold: 0.1 });
+revealEls.forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(30px)';
+  el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
+  observer.observe(el);
+});
+</script>
+
+</body>
+</html>
