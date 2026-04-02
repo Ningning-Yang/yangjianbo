@@ -13,7 +13,7 @@ function buildGallery() {
     div.dataset.type = type;
     div.onclick = () => openLightbox(i);
     div.innerHTML = `
-      <img src="${w.src}" alt="Yang Jianbo — ${w.title}" loading="lazy" draggable="false">
+      <img src="small_image/${w.src}" alt="Yang Jianbo — ${w.title}" loading="lazy" draggable="false">
       <div class="gallery-item-overlay"><div class="gallery-item-info">
         <div class="gallery-item-title">${w.title}</div>
         <div class="gallery-item-year">${w.medium}</div>
