@@ -213,5 +213,17 @@
 
 <script src="works-data.js"></script>
 <script src="gallery.js"></script>
+<script>
+(function() {
+  var lang = navigator.language || navigator.userLanguage || '';
+  if (lang.toLowerCase().indexOf('zh') === 0 && !sessionStorage.getItem('lang-dismissed')) {
+    var bar = document.createElement('div');
+    bar.id = 'lang-bar';
+    bar.innerHTML = '此网站有中文版本 &nbsp;<a href="/zh/" style="color:var(--warm);text-decoration:underline">切换到中文</a>&nbsp;&nbsp;<span onclick="document.getElementById(\'lang-bar\').remove();sessionStorage.setItem(\'lang-dismissed\',\'1\')" style="cursor:pointer;opacity:0.5;font-size:0.8em">✕</span>';
+    bar.style.cssText = 'position:fixed;bottom:0;left:0;right:0;background:var(--ink);color:var(--paper);text-align:center;padding:12px;font-size:0.7rem;letter-spacing:0.15em;z-index:999;';
+    document.body.appendChild(bar);
+  }
+})();
+</script>
 </body>
 </html>
