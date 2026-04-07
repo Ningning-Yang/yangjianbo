@@ -3,219 +3,233 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://yangjianbo.com/</loc>
-    <lastmod>2026-03-18</lastmod>
+    <lastmod>2026-04-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://yangjianbo.com/new-work/%E3%80%8A%E7%89%A7%E5%9C%BA%E3%80%8B%E5%B8%83%E9%9D%A2%E6%B2%B9%E7%94%BB200x230cm2024%E5%B9%B4%EF%BC%88160000%E5%85%83%EF%BC%89.jpg</image:loc>
+      <image:loc>https://yangjianbo.com/works/%E3%80%8A%E7%89%A7%E5%9C%BA%E3%80%8B%E5%B8%83%E9%9D%A2%E6%B2%B9%E7%94%BB200x230cm2024%E5%B9%B4%EF%BC%88160000%E5%85%83%EF%BC%89.jpg</image:loc>
       <image:title>Yang Jianbo — Pasture, Oil on Canvas, 2024</image:title>
       <image:caption>Pasture by Yang Jianbo. Oil on Canvas, 2024.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://yangjianbo.com/new-work/%E3%80%8A%E7%93%A6%E6%89%8E%E5%92%8C%E7%89%9B%E3%80%8B%E5%B8%83%E9%9D%A2%E6%B2%B9%E7%94%BB200x180cm2018%E5%B9%B4%EF%BC%88120000%E5%85%83%EF%BC%89.JPG</image:loc>
+      <image:loc>https://yangjianbo.com/works/%E3%80%8A%E7%93%A6%E6%89%8E%E5%92%8C%E7%89%9B%E3%80%8B%E5%B8%83%E9%9D%A2%E6%B2%B9%E7%94%BB200x180cm2018%E5%B9%B4%EF%BC%88120000%E5%85%83%EF%BC%89.JPG</image:loc>
       <image:title>Yang Jianbo — Waza and the Bull, Oil on Canvas, 2018</image:title>
       <image:caption>Waza and the Bull by Yang Jianbo. Oil on Canvas, 2018.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://yangjianbo.com/new-work/%E3%80%8A%E6%83%8A%E8%9B%B0%E3%80%8B%E5%B8%83%E9%9D%A2%E6%B2%B9%E7%94%BB90x200cm%202018%E5%B9%B4%EF%BC%8860000%E5%85%83%EF%BC%89.JPG</image:loc>
-      <image:title>Yang Jianbo — Awakening of Insects, Oil on Canvas, 2018</image:title>
-      <image:caption>Awakening of Insects by Yang Jianbo. Oil on Canvas, 2018.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://yangjianbo.com/new-work/%E3%80%8A%E6%9A%AE%E8%89%B2%E3%80%8B%E5%B8%83%E9%9D%A2%E6%B2%B9%E7%94%BB90x200cm%202021%E5%B9%B4%EF%BC%8840000%E5%85%83%EF%BC%89.JPG</image:loc>
+      <image:loc>https://yangjianbo.com/works/%E3%80%8A%E6%9A%AE%E8%89%B2%E3%80%8B%E5%B8%83%E9%9D%A2%E6%B2%B9%E7%94%BB90x200cm%202021%E5%B9%B4%EF%BC%8840000%E5%85%83%EF%BC%89.JPG</image:loc>
       <image:title>Yang Jianbo — Dusk, Oil on Canvas, 2021</image:title>
       <image:caption>Dusk by Yang Jianbo. Oil on Canvas, 2021.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://yangjianbo.com/new-work/%E3%80%8A%E7%A7%8B%E5%88%86%E3%80%8B%E5%B8%83%E9%9D%A2%E6%B2%B9%E7%94%BB60x80cm%202019%E5%B9%B4%EF%BC%8815000%E5%85%83%EF%BC%89.jpg</image:loc>
+      <image:loc>https://yangjianbo.com/works/%E3%80%8A%E6%83%8A%E8%9B%B0%E3%80%8B%E5%B8%83%E9%9D%A2%E6%B2%B9%E7%94%BB90x200cm%202018%E5%B9%B4%EF%BC%8860000%E5%85%83%EF%BC%89.JPG</image:loc>
+      <image:title>Yang Jianbo — Awakening of Insects, Oil on Canvas, 2018</image:title>
+      <image:caption>Awakening of Insects by Yang Jianbo. Oil on Canvas, 2018.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://yangjianbo.com/works/%E3%80%8A%E7%A7%8B%E5%88%86%E3%80%8B%E5%B8%83%E9%9D%A2%E6%B2%B9%E7%94%BB60x80cm%202019%E5%B9%B4%EF%BC%8815000%E5%85%83%EF%BC%89.jpg</image:loc>
       <image:title>Yang Jianbo — Autumnal Equinox, Oil on Canvas, 2019</image:title>
       <image:caption>Autumnal Equinox by Yang Jianbo. Oil on Canvas, 2019.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://yangjianbo.com/new-work/%E3%80%8A%E5%B0%8F%E9%9B%AA%E3%80%8B%E5%B8%83%E9%9D%A2%E6%B2%B9%E7%94%BB60x80cm2020%E5%B9%B4%EF%BC%8815000%E5%85%83%EF%BC%89.jpg</image:loc>
+      <image:loc>https://yangjianbo.com/works/%E3%80%8A%E5%B0%8F%E9%9B%AA%E3%80%8B%E5%B8%83%E9%9D%A2%E6%B2%B9%E7%94%BB60x80cm2020%E5%B9%B4%EF%BC%8815000%E5%85%83%EF%BC%89.jpg</image:loc>
       <image:title>Yang Jianbo — Light Snow, Oil on Canvas, 2020</image:title>
       <image:caption>Light Snow by Yang Jianbo. Oil on Canvas, 2020.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://yangjianbo.com/new-work/%E3%80%8A%E7%AB%8B%E5%86%AC%E3%80%8B%E5%B8%83%E9%9D%A2%E6%B2%B9%E7%94%BB60x80cm2020%E5%B9%B4%EF%BC%8815000%E5%85%83%EF%BC%89.jpg</image:loc>
+      <image:loc>https://yangjianbo.com/works/%E3%80%8A%E7%AB%8B%E5%86%AC%E3%80%8B%E5%B8%83%E9%9D%A2%E6%B2%B9%E7%94%BB60x80cm2020%E5%B9%B4%EF%BC%8815000%E5%85%83%EF%BC%89.jpg</image:loc>
       <image:title>Yang Jianbo — Start of Winter, Oil on Canvas, 2020</image:title>
       <image:caption>Start of Winter by Yang Jianbo. Oil on Canvas, 2020.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://yangjianbo.com/new-work/%E3%80%8A%E5%B0%8F%E5%AF%92%E3%80%8B%E5%B8%83%E9%9D%A2%E6%B2%B9%E7%94%BB60x80cm2020%E5%B9%B4%EF%BC%8815000%E5%85%83%EF%BC%89.jpg</image:loc>
+      <image:loc>https://yangjianbo.com/works/%E3%80%8A%E5%B0%8F%E5%AF%92%E3%80%8B%E5%B8%83%E9%9D%A2%E6%B2%B9%E7%94%BB60x80cm2020%E5%B9%B4%EF%BC%8815000%E5%85%83%EF%BC%89.jpg</image:loc>
       <image:title>Yang Jianbo — Minor Cold, Oil on Canvas, 2020</image:title>
       <image:caption>Minor Cold by Yang Jianbo. Oil on Canvas, 2020.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://yangjianbo.com/new-work/%E3%80%8A%E5%86%AC%E8%87%B3%E3%80%8B%E5%B8%83%E9%9D%A2%E6%B2%B9%E7%94%BB60x80cm2020%E5%B9%B4%EF%BC%8815000%E5%85%83%EF%BC%89.jpg</image:loc>
+      <image:loc>https://yangjianbo.com/works/%E3%80%8A%E5%86%AC%E8%87%B3%E3%80%8B%E5%B8%83%E9%9D%A2%E6%B2%B9%E7%94%BB60x80cm2020%E5%B9%B4%EF%BC%8815000%E5%85%83%EF%BC%89.jpg</image:loc>
       <image:title>Yang Jianbo — Winter Solstice, Oil on Canvas, 2020</image:title>
       <image:caption>Winter Solstice by Yang Jianbo. Oil on Canvas, 2020.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://yangjianbo.com/new-work/%E3%80%8A%E5%AF%92%E9%9C%B2%E3%80%8B%E5%B8%83%E9%9D%A2%E6%B2%B9%E7%94%BB60x80cm%202020%E5%B9%B4%EF%BC%8815000%E5%85%83%EF%BC%89.jpg</image:loc>
+      <image:loc>https://yangjianbo.com/works/%E3%80%8A%E5%AF%92%E9%9C%B2%E3%80%8B%E5%B8%83%E9%9D%A2%E6%B2%B9%E7%94%BB60x80cm%202020%E5%B9%B4%EF%BC%8815000%E5%85%83%EF%BC%89.jpg</image:loc>
       <image:title>Yang Jianbo — Cold Dew, Oil on Canvas, 2020</image:title>
       <image:caption>Cold Dew by Yang Jianbo. Oil on Canvas, 2020.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://yangjianbo.com/art-portfolio/14.jpg</image:loc>
-      <image:title>Yang Jianbo — The Wanderer, Oil on Canvas, 2019</image:title>
-      <image:caption>The Wanderer by Yang Jianbo. Oil on Canvas, 2019.</image:caption>
+      <image:loc>https://yangjianbo.com/works/%E9%A3%8E%E6%99%AF/%E3%80%8A%E5%B0%8F%E6%B2%B3%E5%8D%81%E6%9C%88%E3%80%8B%E5%B8%83%E9%9D%A2%E6%B2%B9%E7%94%BB120%C3%97180cm%202003%E5%B9%B4.jpg</image:loc>
+      <image:title>Yang Jianbo — October River, Oil on Canvas, 2003</image:title>
+      <image:caption>October River by Yang Jianbo. Oil on Canvas, 2003.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://yangjianbo.com/art-portfolio/12.jpg</image:loc>
-      <image:title>Yang Jianbo — Plateau Herd, Oil on Canvas</image:title>
-      <image:caption>Plateau Herd by Yang Jianbo. Oil on Canvas.</image:caption>
+      <image:loc>https://yangjianbo.com/works/%E9%A3%8E%E6%99%AF/%E3%80%8A%E9%87%91%E7%A7%8B%E5%8D%81%E6%9C%88%E3%80%8B160%C3%97180cm2009.jpg</image:loc>
+      <image:title>Yang Jianbo — Golden October, Oil on Canvas, 2009</image:title>
+      <image:caption>Golden October by Yang Jianbo. Oil on Canvas, 2009.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://yangjianbo.com/art-portfolio/9.jpg</image:loc>
-      <image:title>Yang Jianbo — The Shepherd and the Blue Mountain, Oil on Canvas, 2019</image:title>
-      <image:caption>The Shepherd and the Blue Mountain by Yang Jianbo. Oil on Canvas, 2019.</image:caption>
+      <image:loc>https://yangjianbo.com/works/%E9%A3%8E%E6%99%AF/%E3%80%8A%E5%9C%AD%E5%B1%B1%E7%9A%84%E9%9B%A8%E5%AD%A3%E3%80%8B50%C3%9770cm2008.jpg</image:loc>
+      <image:title>Yang Jianbo — Rainy Season in Guishan, Oil on Canvas, 2008</image:title>
+      <image:caption>Rainy Season in Guishan by Yang Jianbo. Oil on Canvas, 2008.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://yangjianbo.com/art-portfolio/13.jpg</image:loc>
-      <image:title>Yang Jianbo — The White Coat, Oil on Canvas</image:title>
-      <image:caption>The White Coat by Yang Jianbo. Oil on Canvas.</image:caption>
+      <image:loc>https://yangjianbo.com/works/%E9%A3%8E%E6%99%AF/%E3%80%8A%E5%AF%B8%E5%AE%B6%E7%A5%A0%E5%A0%82%E3%80%8B52%C3%9765cm2015.jpg</image:loc>
+      <image:title>Yang Jianbo — Cun Family Ancestral Hall, Oil on Canvas, 2015</image:title>
+      <image:caption>Cun Family Ancestral Hall by Yang Jianbo. Oil on Canvas, 2015.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://yangjianbo.com/art-portfolio/15.jpg</image:loc>
-      <image:title>Yang Jianbo — The Shepherd, Oil on Canvas</image:title>
-      <image:caption>The Shepherd by Yang Jianbo. Oil on Canvas.</image:caption>
+      <image:loc>https://yangjianbo.com/works/%E9%A3%8E%E6%99%AF/%E3%80%8A%E5%92%8C%E9%A1%BA%E4%B9%A1%E3%80%8B%E5%B8%83%E9%9D%A2%E6%B2%B9%E7%94%BB%2065%C3%9752cm%202015%E5%B9%B4.jpg</image:loc>
+      <image:title>Yang Jianbo — Heshun Village, Oil on Canvas, 2015</image:title>
+      <image:caption>Heshun Village by Yang Jianbo. Oil on Canvas, 2015.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://yangjianbo.com/new-work/%E3%80%8A%E9%A3%9E%E9%B1%BC%E5%92%8C%E9%B8%9F%E3%80%8B%E7%B3%BB%E5%88%97/%E3%80%8A%E9%A3%9E%E9%B1%BC%E5%92%8C%E9%B8%9F%E3%80%8B-1%20%E7%BA%B8%E6%9C%AC%E9%93%85%E7%AC%94%2018%C3%9742cm%202021%E5%B9%B4%EF%BC%882500%E5%85%83%EF%BC%89.jpg</image:loc>
+      <image:loc>https://yangjianbo.com/works/%E9%A3%8E%E6%99%AF/%E3%80%8A%E5%92%8C%E9%A1%BA%E8%8D%B7%E5%A1%98%E3%80%8B%E5%B8%83%E9%9D%A2%E6%B2%B9%E7%94%BB%2052%C3%9765cm%202015%E5%B9%B4.jpg</image:loc>
+      <image:title>Yang Jianbo — Heshun Lotus Pond, Oil on Canvas, 2015</image:title>
+      <image:caption>Heshun Lotus Pond by Yang Jianbo. Oil on Canvas, 2015.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://yangjianbo.com/works/%E9%A3%8E%E6%99%AF/%E3%80%8A%E9%80%86%E5%85%89%E3%80%8B%E5%B8%83%E9%9D%A2%E6%B2%B9%E7%94%BB80x60cm2016%E5%B9%B4.jpg</image:loc>
+      <image:title>Yang Jianbo — Against the Light, Oil on Canvas, 2016</image:title>
+      <image:caption>Against the Light by Yang Jianbo. Oil on Canvas, 2016.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://yangjianbo.com/works/%E9%A3%8E%E6%99%AF/%E6%9D%A8%E5%89%91%E6%B3%A2%E3%80%8A%E8%93%9D%E8%88%B9%E3%80%8B%E5%B8%83%E9%9D%A2%E6%B2%B9%E7%94%BB100x80cm2017%E5%B9%B4.jpg</image:loc>
+      <image:title>Yang Jianbo — Blue Boat, Oil on Canvas, 2017</image:title>
+      <image:caption>Blue Boat by Yang Jianbo. Oil on Canvas, 2017.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://yangjianbo.com/works/%E9%A3%8E%E6%99%AF/%E3%80%8A300%E5%8F%B7%E6%A1%A5%E3%80%8B%E6%9D%BF%E9%9D%A2%E6%B2%B9%E7%94%BB%C3%9830x40cm%202019%E5%B9%B4.jpg</image:loc>
+      <image:title>Yang Jianbo — Bridge No.300, Oil on Panel, 2019</image:title>
+      <image:caption>Bridge No.300 by Yang Jianbo. Oil on Panel, 2019.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://yangjianbo.com/works/%E9%A3%8E%E6%99%AF/%E3%80%8A%E5%AF%86%E8%A5%BF%E8%A5%BF%E6%AF%94%E6%B2%B3%E3%80%8B%E6%9D%BF%E9%9D%A2%E6%B2%B9%E7%94%BB%C3%9830x40cm2019%E5%B9%B4.jpg</image:loc>
+      <image:title>Yang Jianbo — Mississippi River, Oil on Panel, 2019</image:title>
+      <image:caption>Mississippi River by Yang Jianbo. Oil on Panel, 2019.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://yangjianbo.com/works/%E9%A3%8E%E6%99%AF/%E3%80%8A%E6%8B%89%E5%85%8B%E7%BD%97%E6%96%AF%E7%9A%84%E4%B8%8B%E5%8D%88%E3%80%8B%E6%9D%BF%E9%9D%A2%E6%B2%B9%E7%94%BB%C3%9830x40cm%202019%E5%B9%B4.jpg</image:loc>
+      <image:title>Yang Jianbo — Afternoon in La Crosse, Oil on Panel, 2019</image:title>
+      <image:caption>Afternoon in La Crosse by Yang Jianbo. Oil on Panel, 2019.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://yangjianbo.com/works/%E9%A3%8E%E6%99%AF/%E3%80%8A%E6%8B%89%E7%A7%91%E7%BD%97%E6%96%AF%E8%A1%97%E9%81%93%E3%80%8B%E6%9D%BF%E9%9D%A2%E6%B2%B9%E7%94%BB%C3%9830x40cm2019%E5%B9%B4.jpg</image:loc>
+      <image:title>Yang Jianbo — La Crosse Street, Oil on Panel, 2019</image:title>
+      <image:caption>La Crosse Street by Yang Jianbo. Oil on Panel, 2019.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://yangjianbo.com/works/%E9%A3%8E%E6%99%AF/%E3%80%8A%E6%B0%B4%E6%B3%B5%E6%88%BF%E5%A4%96%E3%80%8B%E6%9D%BF%E9%9D%A2%E6%B2%B9%E7%94%BB%C3%9830x40cm2019%E5%B9%B4.jpg</image:loc>
+      <image:title>Yang Jianbo — Outside the Pump House, Oil on Panel, 2019</image:title>
+      <image:caption>Outside the Pump House by Yang Jianbo. Oil on Panel, 2019.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://yangjianbo.com/works/%E9%A3%8E%E6%99%AF/%E3%80%8A%E6%B2%B3%E6%B5%81%E5%8D%9A%E7%89%A9%E9%A6%86%E3%80%8B%E6%9D%BF%E9%9D%A2%E6%B2%B9%E7%94%BB%C3%9830x40cm2019%E5%B9%B4.jpg</image:loc>
+      <image:title>Yang Jianbo — River Museum, Oil on Panel, 2019</image:title>
+      <image:caption>River Museum by Yang Jianbo. Oil on Panel, 2019.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://yangjianbo.com/works/%E9%A3%8E%E6%99%AF/%E3%80%8A%E7%BE%8E%E5%9B%BD%E8%8A%B1%E5%9B%AD%E3%80%8B%E6%9D%BF%E9%9D%A2%E6%B2%B9%E7%94%BB%C3%9830x40cm2019%E5%B9%B4.jpg</image:loc>
+      <image:title>Yang Jianbo — American Garden, Oil on Panel, 2019</image:title>
+      <image:caption>American Garden by Yang Jianbo. Oil on Panel, 2019.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://yangjianbo.com/works/%E9%A3%8E%E6%99%AF/%E3%80%8A%E8%80%81%E7%81%AB%E8%BD%A6%E7%AB%99%E3%80%8B%E6%9D%BF%E9%9D%A2%E6%B2%B9%E7%94%BB%C3%9830x40cm%202019%E5%B9%B4.jpg</image:loc>
+      <image:title>Yang Jianbo — Old Train Station, Oil on Panel, 2019</image:title>
+      <image:caption>Old Train Station by Yang Jianbo. Oil on Panel, 2019.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://yangjianbo.com/works/%E3%80%8A%E9%A3%9E%E9%B1%BC%E5%92%8C%E9%B8%9F%E3%80%8B%E7%B3%BB%E5%88%97/%E3%80%8A%E9%A3%9E%E9%B1%BC%E5%92%8C%E9%B8%9F%E3%80%8B-1%20%E7%BA%B8%E6%9C%AC%E9%93%85%E7%AC%94%2018%C3%9742cm%202021%E5%B9%B4%EF%BC%882500%E5%85%83%EF%BC%89.jpg</image:loc>
       <image:title>Yang Jianbo — Flying Fish and Birds No.1, Pencil on Paper, 2021</image:title>
       <image:caption>Flying Fish and Birds No.1 by Yang Jianbo. Pencil on Paper, 2021.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://yangjianbo.com/new-work/%E3%80%8A%E9%A3%9E%E9%B1%BC%E5%92%8C%E9%B8%9F%E3%80%8B%E7%B3%BB%E5%88%97/%E3%80%8A%E9%A3%9E%E9%B1%BC%E5%92%8C%E9%B8%9F%E3%80%8B-2%E7%BA%B8%E6%9C%AC%E9%93%85%E7%AC%94%2018%C3%9742cm%202021%E5%B9%B4%EF%BC%882500%E5%85%83%EF%BC%89.jpg</image:loc>
+      <image:loc>https://yangjianbo.com/works/%E3%80%8A%E9%A3%9E%E9%B1%BC%E5%92%8C%E9%B8%9F%E3%80%8B%E7%B3%BB%E5%88%97/%E3%80%8A%E9%A3%9E%E9%B1%BC%E5%92%8C%E9%B8%9F%E3%80%8B-2%E7%BA%B8%E6%9C%AC%E9%93%85%E7%AC%94%2018%C3%9742cm%202021%E5%B9%B4%EF%BC%882500%E5%85%83%EF%BC%89.jpg</image:loc>
       <image:title>Yang Jianbo — Flying Fish and Birds No.2, Pencil on Paper, 2021</image:title>
       <image:caption>Flying Fish and Birds No.2 by Yang Jianbo. Pencil on Paper, 2021.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://yangjianbo.com/new-work/%E3%80%8A%E9%A3%9E%E9%B1%BC%E5%92%8C%E9%B8%9F%E3%80%8B%E7%B3%BB%E5%88%97/%E3%80%8A%E9%A3%9E%E9%B1%BC%E5%92%8C%E9%B8%9F%E3%80%8B-3%E7%BA%B8%E6%9C%AC%E9%93%85%E7%AC%94%2018%C3%9742cm%202021%E5%B9%B4%EF%BC%882500%E5%85%83%EF%BC%89.jpg</image:loc>
+      <image:loc>https://yangjianbo.com/works/%E3%80%8A%E9%A3%9E%E9%B1%BC%E5%92%8C%E9%B8%9F%E3%80%8B%E7%B3%BB%E5%88%97/%E3%80%8A%E9%A3%9E%E9%B1%BC%E5%92%8C%E9%B8%9F%E3%80%8B-3%E7%BA%B8%E6%9C%AC%E9%93%85%E7%AC%94%2018%C3%9742cm%202021%E5%B9%B4%EF%BC%882500%E5%85%83%EF%BC%89.jpg</image:loc>
       <image:title>Yang Jianbo — Flying Fish and Birds No.3, Pencil on Paper, 2021</image:title>
       <image:caption>Flying Fish and Birds No.3 by Yang Jianbo. Pencil on Paper, 2021.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://yangjianbo.com/new-work/%E3%80%8A%E9%A3%9E%E9%B1%BC%E5%92%8C%E9%B8%9F%E3%80%8B%E7%B3%BB%E5%88%97/%E3%80%8A%E9%A3%9E%E9%B1%BC%E5%92%8C%E9%B8%9F%E3%80%8B-4%E7%BA%B8%E6%9C%AC%E9%93%85%E7%AC%94%2018%C3%9742cm%202021%E5%B9%B4%EF%BC%882500%E5%85%83%EF%BC%89.jpg</image:loc>
+      <image:loc>https://yangjianbo.com/works/%E3%80%8A%E9%A3%9E%E9%B1%BC%E5%92%8C%E9%B8%9F%E3%80%8B%E7%B3%BB%E5%88%97/%E3%80%8A%E9%A3%9E%E9%B1%BC%E5%92%8C%E9%B8%9F%E3%80%8B-4%E7%BA%B8%E6%9C%AC%E9%93%85%E7%AC%94%2018%C3%9742cm%202021%E5%B9%B4%EF%BC%882500%E5%85%83%EF%BC%89.jpg</image:loc>
       <image:title>Yang Jianbo — Flying Fish and Birds No.4, Pencil on Paper, 2021</image:title>
       <image:caption>Flying Fish and Birds No.4 by Yang Jianbo. Pencil on Paper, 2021.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://yangjianbo.com/new-work/%E3%80%8A%E9%A3%9E%E9%B1%BC%E5%92%8C%E9%B8%9F%E3%80%8B%E7%B3%BB%E5%88%97/%E3%80%8A%E9%A3%9E%E9%B1%BC%E5%92%8C%E9%B8%9F%E3%80%8B-5%E7%BA%B8%E6%9C%AC%E9%93%85%E7%AC%94%2018%C3%9742cm%202021%E5%B9%B4%EF%BC%882500%E5%85%83%EF%BC%89.jpg</image:loc>
+      <image:loc>https://yangjianbo.com/works/%E3%80%8A%E9%A3%9E%E9%B1%BC%E5%92%8C%E9%B8%9F%E3%80%8B%E7%B3%BB%E5%88%97/%E3%80%8A%E9%A3%9E%E9%B1%BC%E5%92%8C%E9%B8%9F%E3%80%8B-5%E7%BA%B8%E6%9C%AC%E9%93%85%E7%AC%94%2018%C3%9742cm%202021%E5%B9%B4%EF%BC%882500%E5%85%83%EF%BC%89.jpg</image:loc>
       <image:title>Yang Jianbo — Flying Fish and Birds No.5, Pencil on Paper, 2021</image:title>
       <image:caption>Flying Fish and Birds No.5 by Yang Jianbo. Pencil on Paper, 2021.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://yangjianbo.com/new-work/%E3%80%8A%E9%A3%9E%E9%B1%BC%E5%92%8C%E9%B8%9F%E3%80%8B%E7%B3%BB%E5%88%97/%E3%80%8A%E9%A3%9E%E9%B1%BC%E5%92%8C%E9%B8%9F%E3%80%8B-6%E7%BA%B8%E6%9C%AC%E9%93%85%E7%AC%94%2018%C3%9742cm%202021%E5%B9%B4%EF%BC%882500%E5%85%83%EF%BC%89.jpg</image:loc>
+      <image:loc>https://yangjianbo.com/works/%E3%80%8A%E9%A3%9E%E9%B1%BC%E5%92%8C%E9%B8%9F%E3%80%8B%E7%B3%BB%E5%88%97/%E3%80%8A%E9%A3%9E%E9%B1%BC%E5%92%8C%E9%B8%9F%E3%80%8B-6%E7%BA%B8%E6%9C%AC%E9%93%85%E7%AC%94%2018%C3%9742cm%202021%E5%B9%B4%EF%BC%882500%E5%85%83%EF%BC%89.jpg</image:loc>
       <image:title>Yang Jianbo — Flying Fish and Birds No.6, Pencil on Paper, 2021</image:title>
       <image:caption>Flying Fish and Birds No.6 by Yang Jianbo. Pencil on Paper, 2021.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://yangjianbo.com/new-work/%E3%80%8A%E9%A3%9E%E9%B1%BC%E5%92%8C%E9%B8%9F%E3%80%8B%E7%B3%BB%E5%88%97/%E3%80%8A%E9%A3%9E%E9%B1%BC%E5%92%8C%E9%B8%9F%E3%80%8B-7%E7%BA%B8%E6%9C%AC%E9%93%85%E7%AC%94%2018%C3%9742cm%202018%E5%B9%B4%EF%BC%882500%E5%85%83%EF%BC%89.jpg</image:loc>
+      <image:loc>https://yangjianbo.com/works/%E3%80%8A%E9%A3%9E%E9%B1%BC%E5%92%8C%E9%B8%9F%E3%80%8B%E7%B3%BB%E5%88%97/%E3%80%8A%E9%A3%9E%E9%B1%BC%E5%92%8C%E9%B8%9F%E3%80%8B-7%E7%BA%B8%E6%9C%AC%E9%93%85%E7%AC%94%2018%C3%9742cm%202018%E5%B9%B4%EF%BC%882500%E5%85%83%EF%BC%89.jpg</image:loc>
       <image:title>Yang Jianbo — Flying Fish and Birds No.7, Pencil on Paper, 2018</image:title>
       <image:caption>Flying Fish and Birds No.7 by Yang Jianbo. Pencil on Paper, 2018.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://yangjianbo.com/new-work/%E3%80%8A%E9%A3%9E%E9%B1%BC%E5%92%8C%E9%B8%9F%E3%80%8B%E7%B3%BB%E5%88%97/%E3%80%8A%E9%A3%9E%E9%B1%BC%E5%92%8C%E9%B8%9F%E3%80%8B-8%E7%BA%B8%E6%9C%AC%E9%93%85%E7%AC%94%2018%C3%9742cm%202018%E5%B9%B4%EF%BC%882500%E5%85%83%EF%BC%89.jpg</image:loc>
+      <image:loc>https://yangjianbo.com/works/%E3%80%8A%E9%A3%9E%E9%B1%BC%E5%92%8C%E9%B8%9F%E3%80%8B%E7%B3%BB%E5%88%97/%E3%80%8A%E9%A3%9E%E9%B1%BC%E5%92%8C%E9%B8%9F%E3%80%8B-8%E7%BA%B8%E6%9C%AC%E9%93%85%E7%AC%94%2018%C3%9742cm%202018%E5%B9%B4%EF%BC%882500%E5%85%83%EF%BC%89.jpg</image:loc>
       <image:title>Yang Jianbo — Flying Fish and Birds No.8, Pencil on Paper, 2018</image:title>
       <image:caption>Flying Fish and Birds No.8 by Yang Jianbo. Pencil on Paper, 2018.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://yangjianbo.com/new-work/%E3%80%8A%E6%8B%96%E6%8B%89%E6%9C%BA%E3%80%8B%E7%B3%BB%E5%88%97/%E3%80%8A%E6%8B%96%E6%8B%89%E6%9C%BA%E3%80%8B-2%E6%B0%B4%E5%BD%A9%E6%98%8E%E4%BF%A1%E7%89%8710%C3%9715cm%EF%BC%88%E5%8F%AF%E6%91%86%E6%94%BE%E6%A1%8C%E9%9D%A2%EF%BC%892016%E5%B9%B4%EF%BC%88750%E5%85%83%EF%BC%89.jpg</image:loc>
+      <image:loc>https://yangjianbo.com/works/%E3%80%8A%E6%8B%96%E6%8B%89%E6%9C%BA%E3%80%8B%E7%B3%BB%E5%88%97/%E3%80%8A%E6%8B%96%E6%8B%89%E6%9C%BA%E3%80%8B-2%E6%B0%B4%E5%BD%A9%E6%98%8E%E4%BF%A1%E7%89%8710%C3%9715cm%EF%BC%88%E5%8F%AF%E6%91%86%E6%94%BE%E6%A1%8C%E9%9D%A2%EF%BC%892016%E5%B9%B4%EF%BC%88750%E5%85%83%EF%BC%89.jpg</image:loc>
       <image:title>Yang Jianbo — Tractor No.2, Watercolour Postcard, 2016</image:title>
       <image:caption>Tractor No.2 by Yang Jianbo. Watercolour Postcard, 2016.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://yangjianbo.com/new-work/%E3%80%8A%E6%8B%96%E6%8B%89%E6%9C%BA%E3%80%8B%E7%B3%BB%E5%88%97/%E3%80%8A%E6%8B%96%E6%8B%89%E6%9C%BA%E3%80%8B-3%E6%B0%B4%E5%BD%A9%E6%98%8E%E4%BF%A1%E7%89%8710%C3%9715cm%EF%BC%88%E5%8F%AF%E6%91%86%E6%94%BE%E6%A1%8C%E9%9D%A2%EF%BC%892016%E5%B9%B4%EF%BC%88750%E5%85%83%EF%BC%89.jpg</image:loc>
+      <image:loc>https://yangjianbo.com/works/%E3%80%8A%E6%8B%96%E6%8B%89%E6%9C%BA%E3%80%8B%E7%B3%BB%E5%88%97/%E3%80%8A%E6%8B%96%E6%8B%89%E6%9C%BA%E3%80%8B-3%E6%B0%B4%E5%BD%A9%E6%98%8E%E4%BF%A1%E7%89%8710%C3%9715cm%EF%BC%88%E5%8F%AF%E6%91%86%E6%94%BE%E6%A1%8C%E9%9D%A2%EF%BC%892016%E5%B9%B4%EF%BC%88750%E5%85%83%EF%BC%89.jpg</image:loc>
       <image:title>Yang Jianbo — Tractor No.3, Watercolour Postcard, 2016</image:title>
       <image:caption>Tractor No.3 by Yang Jianbo. Watercolour Postcard, 2016.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://yangjianbo.com/new-work/%E3%80%8A%E6%8B%96%E6%8B%89%E6%9C%BA%E3%80%8B%E7%B3%BB%E5%88%97/%E3%80%8A%E6%8B%96%E6%8B%89%E6%9C%BA%E3%80%8B-4%E6%B0%B4%E5%BD%A9%E6%98%8E%E4%BF%A1%E7%89%8710%C3%9715cm%EF%BC%88%E5%8F%AF%E6%91%86%E6%94%BE%E6%A1%8C%E9%9D%A2%EF%BC%892016%E5%B9%B4%EF%BC%88750%E5%85%83%EF%BC%89.jpg</image:loc>
+      <image:loc>https://yangjianbo.com/works/%E3%80%8A%E6%8B%96%E6%8B%89%E6%9C%BA%E3%80%8B%E7%B3%BB%E5%88%97/%E3%80%8A%E6%8B%96%E6%8B%89%E6%9C%BA%E3%80%8B-4%E6%B0%B4%E5%BD%A9%E6%98%8E%E4%BF%A1%E7%89%8710%C3%9715cm%EF%BC%88%E5%8F%AF%E6%91%86%E6%94%BE%E6%A1%8C%E9%9D%A2%EF%BC%892016%E5%B9%B4%EF%BC%88750%E5%85%83%EF%BC%89.jpg</image:loc>
       <image:title>Yang Jianbo — Tractor No.4, Watercolour Postcard, 2016</image:title>
       <image:caption>Tractor No.4 by Yang Jianbo. Watercolour Postcard, 2016.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://yangjianbo.com/new-work/%E3%80%8A%E6%8B%96%E6%8B%89%E6%9C%BA%E3%80%8B%E7%B3%BB%E5%88%97/%E3%80%8A%E6%8B%96%E6%8B%89%E6%9C%BA%E3%80%8B-5%E6%B0%B4%E5%BD%A9%E6%98%8E%E4%BF%A1%E7%89%8710%C3%9715cm%EF%BC%88%E5%8F%AF%E6%91%86%E6%94%BE%E6%A1%8C%E9%9D%A2%EF%BC%892016%E5%B9%B4%EF%BC%88750%E5%85%83%EF%BC%89.jpg</image:loc>
+      <image:loc>https://yangjianbo.com/works/%E3%80%8A%E6%8B%96%E6%8B%89%E6%9C%BA%E3%80%8B%E7%B3%BB%E5%88%97/%E3%80%8A%E6%8B%96%E6%8B%89%E6%9C%BA%E3%80%8B-5%E6%B0%B4%E5%BD%A9%E6%98%8E%E4%BF%A1%E7%89%8710%C3%9715cm%EF%BC%88%E5%8F%AF%E6%91%86%E6%94%BE%E6%A1%8C%E9%9D%A2%EF%BC%892016%E5%B9%B4%EF%BC%88750%E5%85%83%EF%BC%89.jpg</image:loc>
       <image:title>Yang Jianbo — Tractor No.5, Watercolour Postcard, 2016</image:title>
       <image:caption>Tractor No.5 by Yang Jianbo. Watercolour Postcard, 2016.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://yangjianbo.com/new-work/%E3%80%8A%E6%8B%96%E6%8B%89%E6%9C%BA%E3%80%8B%E7%B3%BB%E5%88%97/%E3%80%8A%E6%8B%96%E6%8B%89%E6%9C%BA%E3%80%8B-6%E6%B0%B4%E5%BD%A9%E6%98%8E%E4%BF%A1%E7%89%8710%C3%9715cm%EF%BC%88%E5%8F%AF%E6%91%86%E6%94%BE%E6%A1%8C%E9%9D%A2%EF%BC%892016%E5%B9%B4%EF%BC%88750%E5%85%83%EF%BC%89.jpg</image:loc>
+      <image:loc>https://yangjianbo.com/works/%E3%80%8A%E6%8B%96%E6%8B%89%E6%9C%BA%E3%80%8B%E7%B3%BB%E5%88%97/%E3%80%8A%E6%8B%96%E6%8B%89%E6%9C%BA%E3%80%8B-6%E6%B0%B4%E5%BD%A9%E6%98%8E%E4%BF%A1%E7%89%8710%C3%9715cm%EF%BC%88%E5%8F%AF%E6%91%86%E6%94%BE%E6%A1%8C%E9%9D%A2%EF%BC%892016%E5%B9%B4%EF%BC%88750%E5%85%83%EF%BC%89.jpg</image:loc>
       <image:title>Yang Jianbo — Tractor No.6, Watercolour Postcard, 2016</image:title>
       <image:caption>Tractor No.6 by Yang Jianbo. Watercolour Postcard, 2016.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://yangjianbo.com/new-work/%E3%80%8A%E6%8B%96%E6%8B%89%E6%9C%BA%E3%80%8B%E7%B3%BB%E5%88%97/%E3%80%8A%E6%8B%96%E6%8B%89%E6%9C%BA%E3%80%8B-7%E6%B0%B4%E5%BD%A9%E6%98%8E%E4%BF%A1%E7%89%8710%C3%9715cm%EF%BC%88%E5%8F%AF%E6%91%86%E6%94%BE%E6%A1%8C%E9%9D%A2%EF%BC%892016%E5%B9%B4%EF%BC%88750%E5%85%83%EF%BC%89.jpg</image:loc>
+      <image:loc>https://yangjianbo.com/works/%E3%80%8A%E6%8B%96%E6%8B%89%E6%9C%BA%E3%80%8B%E7%B3%BB%E5%88%97/%E3%80%8A%E6%8B%96%E6%8B%89%E6%9C%BA%E3%80%8B-7%E6%B0%B4%E5%BD%A9%E6%98%8E%E4%BF%A1%E7%89%8710%C3%9715cm%EF%BC%88%E5%8F%AF%E6%91%86%E6%94%BE%E6%A1%8C%E9%9D%A2%EF%BC%892016%E5%B9%B4%EF%BC%88750%E5%85%83%EF%BC%89.jpg</image:loc>
       <image:title>Yang Jianbo — Tractor No.7, Watercolour Postcard, 2016</image:title>
       <image:caption>Tractor No.7 by Yang Jianbo. Watercolour Postcard, 2016.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://yangjianbo.com/new-work/%E3%80%8A%E6%8B%96%E6%8B%89%E6%9C%BA%E3%80%8B%E7%B3%BB%E5%88%97/%E3%80%8A%E6%8B%96%E6%8B%89%E6%9C%BA%E3%80%8B-8%E6%B0%B4%E5%BD%A9%E6%98%8E%E4%BF%A1%E7%89%8710%C3%9715cm%EF%BC%88%E5%8F%AF%E6%91%86%E6%94%BE%E6%A1%8C%E9%9D%A2%EF%BC%892016%E5%B9%B4%EF%BC%88750%E5%85%83%EF%BC%89.jpg</image:loc>
+      <image:loc>https://yangjianbo.com/works/%E3%80%8A%E6%8B%96%E6%8B%89%E6%9C%BA%E3%80%8B%E7%B3%BB%E5%88%97/%E3%80%8A%E6%8B%96%E6%8B%89%E6%9C%BA%E3%80%8B-8%E6%B0%B4%E5%BD%A9%E6%98%8E%E4%BF%A1%E7%89%8710%C3%9715cm%EF%BC%88%E5%8F%AF%E6%91%86%E6%94%BE%E6%A1%8C%E9%9D%A2%EF%BC%892016%E5%B9%B4%EF%BC%88750%E5%85%83%EF%BC%89.jpg</image:loc>
       <image:title>Yang Jianbo — Tractor No.8, Watercolour Postcard, 2016</image:title>
       <image:caption>Tractor No.8 by Yang Jianbo. Watercolour Postcard, 2016.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://yangjianbo.com/new-work/%E3%80%8A%E6%8B%96%E6%8B%89%E6%9C%BA%E3%80%8B%E7%B3%BB%E5%88%97/%E3%80%8A%E6%8B%96%E6%8B%89%E6%9C%BA%E3%80%8B-9%E6%B0%B4%E5%BD%A9%E6%98%8E%E4%BF%A1%E7%89%8710%C3%9715cm%EF%BC%88%E5%8F%AF%E6%91%86%E6%94%BE%E6%A1%8C%E9%9D%A2%EF%BC%892016%E5%B9%B4%EF%BC%88750%E5%85%83%EF%BC%89.jpg</image:loc>
+      <image:loc>https://yangjianbo.com/works/%E3%80%8A%E6%8B%96%E6%8B%89%E6%9C%BA%E3%80%8B%E7%B3%BB%E5%88%97/%E3%80%8A%E6%8B%96%E6%8B%89%E6%9C%BA%E3%80%8B-9%E6%B0%B4%E5%BD%A9%E6%98%8E%E4%BF%A1%E7%89%8710%C3%9715cm%EF%BC%88%E5%8F%AF%E6%91%86%E6%94%BE%E6%A1%8C%E9%9D%A2%EF%BC%892016%E5%B9%B4%EF%BC%88750%E5%85%83%EF%BC%89.jpg</image:loc>
       <image:title>Yang Jianbo — Tractor No.9, Watercolour Postcard, 2016</image:title>
       <image:caption>Tractor No.9 by Yang Jianbo. Watercolour Postcard, 2016.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://yangjianbo.com/new-work/%E3%80%8A%E7%BA%A2%E8%89%B2%E6%9C%BA%E5%99%A8%E3%80%8B%E7%B3%BB%E5%88%97/%E3%80%8A%E7%BA%A2%E8%89%B2%E6%9C%BA%E5%99%A8%E3%80%8B-1%E6%B0%B4%E5%BD%A9%E6%98%8E%E4%BF%A1%E7%89%8710%C3%9715cm2021%E5%B9%B4%EF%BC%88750%E5%85%83%EF%BC%89.jpg</image:loc>
+      <image:loc>https://yangjianbo.com/works/%E3%80%8A%E7%BA%A2%E8%89%B2%E6%9C%BA%E5%99%A8%E3%80%8B%E7%B3%BB%E5%88%97/%E3%80%8A%E7%BA%A2%E8%89%B2%E6%9C%BA%E5%99%A8%E3%80%8B-1%E6%B0%B4%E5%BD%A9%E6%98%8E%E4%BF%A1%E7%89%8710%C3%9715cm2021%E5%B9%B4%EF%BC%88750%E5%85%83%EF%BC%89.jpg</image:loc>
       <image:title>Yang Jianbo — Red Machine No.1, Watercolour Postcard, 2021</image:title>
       <image:caption>Red Machine No.1 by Yang Jianbo. Watercolour Postcard, 2021.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://yangjianbo.com/new-work/%E3%80%8A%E7%BA%A2%E8%89%B2%E6%9C%BA%E5%99%A8%E3%80%8B%E7%B3%BB%E5%88%97/%E3%80%8A%E7%BA%A2%E8%89%B2%E6%9C%BA%E5%99%A8%E3%80%8B-2%E6%B0%B4%E5%BD%A9%E6%98%8E%E4%BF%A1%E7%89%8710%C3%9715cm2021%E5%B9%B4%EF%BC%88750%E5%85%83%EF%BC%89.jpg</image:loc>
+      <image:loc>https://yangjianbo.com/works/%E3%80%8A%E7%BA%A2%E8%89%B2%E6%9C%BA%E5%99%A8%E3%80%8B%E7%B3%BB%E5%88%97/%E3%80%8A%E7%BA%A2%E8%89%B2%E6%9C%BA%E5%99%A8%E3%80%8B-2%E6%B0%B4%E5%BD%A9%E6%98%8E%E4%BF%A1%E7%89%8710%C3%9715cm2021%E5%B9%B4%EF%BC%88750%E5%85%83%EF%BC%89.jpg</image:loc>
       <image:title>Yang Jianbo — Red Machine No.2, Watercolour Postcard, 2021</image:title>
       <image:caption>Red Machine No.2 by Yang Jianbo. Watercolour Postcard, 2021.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://yangjianbo.com/new-work/%E3%80%8A%E7%BA%A2%E8%89%B2%E6%9C%BA%E5%99%A8%E3%80%8B%E7%B3%BB%E5%88%97/%E3%80%8A%E7%BA%A2%E8%89%B2%E6%9C%BA%E5%99%A8%E3%80%8B-3%E6%B0%B4%E5%BD%A9%E6%98%8E%E4%BF%A1%E7%89%8710%C3%9715cm%EF%BC%88%E5%8F%AF%E6%91%86%E6%94%BE%E6%A1%8C%E9%9D%A2%EF%BC%892021%E5%B9%B4%EF%BC%88750%E5%85%83%EF%BC%89.jpg</image:loc>
+      <image:loc>https://yangjianbo.com/works/%E3%80%8A%E7%BA%A2%E8%89%B2%E6%9C%BA%E5%99%A8%E3%80%8B%E7%B3%BB%E5%88%97/%E3%80%8A%E7%BA%A2%E8%89%B2%E6%9C%BA%E5%99%A8%E3%80%8B-3%E6%B0%B4%E5%BD%A9%E6%98%8E%E4%BF%A1%E7%89%8710%C3%9715cm%EF%BC%88%E5%8F%AF%E6%91%86%E6%94%BE%E6%A1%8C%E9%9D%A2%EF%BC%892021%E5%B9%B4%EF%BC%88750%E5%85%83%EF%BC%89.jpg</image:loc>
       <image:title>Yang Jianbo — Red Machine No.3, Watercolour Postcard, 2021</image:title>
       <image:caption>Red Machine No.3 by Yang Jianbo. Watercolour Postcard, 2021.</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Blog pages -->
-  <url>
-    <loc>https://yangjianbo.com/blog/</loc>
-    <lastmod>2026-03-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yangjianbo.com/blog/tibetan-landscape-oil-painting.html</loc>
-    <lastmod>2026-03-15</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://yangjianbo.com/art-portfolio/9.jpg</image:loc>
-      <image:title>The Shepherd and the Blue Mountain — Yang Jianbo, Oil on Canvas, 2019</image:title>
-      <image:caption>Featured image for essay: Painting the Tibetan Plateau: Light, Distance, and Silence</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://yangjianbo.com/blog/contemporary-chinese-oil-painting.html</loc>
-    <lastmod>2026-02-20</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://yangjianbo.com/art-portfolio/10.jpg</image:loc>
-      <image:title>Yang Jianbo — Oil on Canvas, Tibetan Series</image:title>
-      <image:caption>Featured image for essay: Between East and West: Contemporary Chinese Oil Painting</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://yangjianbo.com/blog/yunnan-figure-painting.html</loc>
-    <lastmod>2026-01-18</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://yangjianbo.com/art-portfolio/14.jpg</image:loc>
-      <image:title>The Wanderer — Yang Jianbo, Oil on Canvas, 2019</image:title>
-      <image:caption>Featured image for essay: The Figure in the Landscape: Painting People of Yunnan and Tibet</image:caption>
     </image:image>
   </url>
 </urlset>

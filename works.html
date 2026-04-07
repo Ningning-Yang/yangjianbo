@@ -62,9 +62,12 @@
 
   /* Type badge */
   .tag { border-radius: 3px; padding: 2px 7px; font-size: 10px; font-weight: 500; white-space: nowrap; cursor: pointer; user-select: none; }
-  .tag-oil   { background: #c9a96e28; color: #7a5520; }
-  .tag-draw  { background: #6e9ec928; color: #1e5080; }
-  .tag-water { background: #6ec9b028; color: #1e6050; }
+  .tag-pastoral   { background: #c9a96e28; color: #7a5520; }
+  .tag-solar      { background: #c9c06e28; color: #6a5010; }
+  .tag-landscape  { background: #9ec96e28; color: #3a6020; }
+  .tag-fish       { background: #6e9ec928; color: #1e5080; }
+  .tag-tractor    { background: #6ec9b028; color: #1e6050; }
+  .tag-red        { background: #c96e6e28; color: #801e1e; }
 
   /* Delete button */
   .del-btn { background: #fff0f0; border: 1px solid #f0d0d0; color: #c05050; font-size: 12px; cursor: pointer; padding: 3px 8px; line-height: 1; border-radius: 3px; font-weight: 500; }
@@ -133,16 +136,19 @@
 
 // ── Thumb cell HTML ───────────────────────────────────────────────
 function thumbCell(src, title) {
-  if (src) return `<img class="thumb" src="${src}" alt="${title}" onerror="this.style.display='none'">`;
+  if (src) return `<img class="thumb" src="small_image/${src}" alt="${title}" onerror="this.style.display='none'">`;
   return '';
 }
 
 // ── Load from localStorage or defaults ───────────────────────────
+// Versioned key — bump STORAGE_KEY whenever works-data.js paths change
+const STORAGE_KEY = 'yangjianbo_works_v3';
 function loadData() {
   try {
-    const saved = localStorage.getItem('yangjianbo_works');
-    return saved ? JSON.parse(saved) : DEFAULT_WORKS;
-  } catch(e) { return DEFAULT_WORKS; }
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved) return JSON.parse(saved);
+  } catch(e) {}
+  return JSON.parse(JSON.stringify(DEFAULT_WORKS));
 }
 
 let works = loadData();
@@ -211,9 +217,16 @@ function selectAll(el) {
 }
 
 function typeBadge(type) {
-  if (type === 'oil')        return '<span class="tag tag-oil">Oil</span>';
-  if (type === 'watercolor') return '<span class="tag tag-water">Watercolour</span>';
-  return '<span class="tag tag-draw">Drawing</span>';
+  const map = {
+    'pastoral':    ['tag-pastoral',  'Pastoral'],
+    'solar-terms': ['tag-solar',     'Solar Terms'],
+    'landscape':   ['tag-landscape', 'Landscape'],
+    'flying-fish': ['tag-fish',      'Flying Fish'],
+    'tractor':     ['tag-tractor',   'Tractor'],
+    'red-machine': ['tag-red',       'Red Machine'],
+  };
+  const [cls, label] = map[type] || ['tag-pastoral', type];
+  return `<span class="tag ${cls}">${label}</span>`;
 }
 
 function formatPrice(val, symbol) {
@@ -227,8 +240,8 @@ function formatPrice(val, symbol) {
 
 // ── Toggle type ───────────────────────────────────────────────────
 function toggleType(i, td) {
-  const cycle = { 'oil': 'draw', 'draw': 'watercolor', 'watercolor': 'oil' };
-  works[i].type = cycle[works[i].type] || 'oil';
+  const cycle = { 'pastoral': 'solar-terms', 'solar-terms': 'landscape', 'landscape': 'flying-fish', 'flying-fish': 'tractor', 'tractor': 'red-machine', 'red-machine': 'pastoral' };
+  works[i].type = cycle[works[i].type] || 'pastoral';
   td.innerHTML = typeBadge(works[i].type);
   autoSave();
 }
@@ -253,7 +266,7 @@ function deleteRow(i) {
 
 // ── Save ──────────────────────────────────────────────────────────
 function autoSave() {
-  localStorage.setItem('yangjianbo_works', JSON.stringify(works));
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(works));
 }
 
 function saveData() {
@@ -266,7 +279,7 @@ function saveData() {
 // ── Reset to defaults ─────────────────────────────────────────────
 function resetToDefaults() {
   if (!confirm('Reset table to default data? All saved changes will be lost.')) return;
-  localStorage.removeItem('yangjianbo_works');
+  localStorage.removeItem(STORAGE_KEY);
   works = JSON.parse(JSON.stringify(DEFAULT_WORKS));
   render();
 }
@@ -276,7 +289,7 @@ function exportCSV() {
   const headers = ['#','Title','中文名','Medium','Year','Type','Size','Price CNY','Price USD','Collection','Notes','Image'];
   const rows = works.map((w, i) => [
     i+1, w.title, w.zh, w.medium, w.year,
-    w.type === 'oil' ? 'Oil Painting' : 'Drawing',
+    w.type,
     w.size, w.cny, w.usd, w.collection, w.notes, w.src
   ].map(v => `"${String(v).replace(/"/g,'""')}"`).join(','));
 
@@ -290,15 +303,21 @@ function exportCSV() {
 
 // ── Summary ───────────────────────────────────────────────────────
 function updateSummary() {
-  const oil   = works.filter(w => w.type === 'oil').length;
-  const draw  = works.filter(w => w.type === 'draw').length;
-  const water = works.filter(w => w.type === 'watercolor').length;
-  const priced = works.filter(w => w.cny && w.cny !== '').length;
+  const pastoral   = works.filter(w => w.type === 'pastoral').length;
+  const solarTerms = works.filter(w => w.type === 'solar-terms').length;
+  const landscape  = works.filter(w => w.type === 'landscape').length;
+  const flyingFish = works.filter(w => w.type === 'flying-fish').length;
+  const tractor    = works.filter(w => w.type === 'tractor').length;
+  const redMachine = works.filter(w => w.type === 'red-machine').length;
+  const priced     = works.filter(w => w.cny && w.cny !== '').length;
   document.getElementById('summary').innerHTML = `
     <div class="summary-card"><div class="val">${works.length}</div><div class="lbl">Total Works</div></div>
-    <div class="summary-card"><div class="val">${oil}</div><div class="lbl">Oil Paintings</div></div>
-    <div class="summary-card"><div class="val">${draw}</div><div class="lbl">Drawings</div></div>
-    <div class="summary-card"><div class="val">${water}</div><div class="lbl">Watercolours</div></div>
+    <div class="summary-card"><div class="val">${pastoral}</div><div class="lbl">Pastoral</div></div>
+    <div class="summary-card"><div class="val">${solarTerms}</div><div class="lbl">Solar Terms</div></div>
+    <div class="summary-card"><div class="val">${landscape}</div><div class="lbl">Landscape</div></div>
+    <div class="summary-card"><div class="val">${flyingFish}</div><div class="lbl">Flying Fish</div></div>
+    <div class="summary-card"><div class="val">${tractor}</div><div class="lbl">Tractor</div></div>
+    <div class="summary-card"><div class="val">${redMachine}</div><div class="lbl">Red Machine</div></div>
     <div class="summary-card"><div class="val">${priced}</div><div class="lbl">Priced Works</div></div>
   `;
 }
