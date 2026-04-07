@@ -2,4 +2,11 @@ User-agent: *
 Allow: /
 Disallow: /works.html
 
+User-agent: Baiduspider
+Allow: /
+Disallow: /works.html
+
+User-agent: Baiduspider-image
+Allow: /
+
 Sitemap: https://yangjianbo.com/sitemap.xml
