@@ -30,6 +30,7 @@ const SERIES = [
     num: '04',
     title: 'Flying Fish and Birds',
     zh: '飞鱼和鸟',
+    featuredIndex: 6,
     desc: 'A series of eight pencil drawings on paper (18×42 cm each) in which flying fish and birds share an impossible sky — part natural observation, part surrealist vision. The elongated horizontal format gives each work the quality of a scroll, slowing the eye across creatures suspended between water, air, and the drawn line.'
   },
   {
@@ -56,7 +57,7 @@ function buildSeriesPanels() {
     const works = DEFAULT_WORKS.filter(w => w.type === s.key);
     if (!works.length) return;
 
-    const featured = works[0];
+    const featured = works[s.featuredIndex || 0];
     const panel = document.createElement('div');
     panel.className = 'sp';
     panel.dataset.key = s.key;
