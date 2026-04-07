@@ -101,14 +101,6 @@ function buildSeriesPanels() {
     container.appendChild(panel);
   });
 
-  // Auto-open first panel after layout is settled
-  requestAnimationFrame(() => {
-    const first = container.querySelector('.sp');
-    if (first) {
-      first.classList.add('sp--open');
-      setPanelHeight(first, true);
-    }
-  });
 }
 
 // ── Toggle panel open / close ─────────────────────────────────────
