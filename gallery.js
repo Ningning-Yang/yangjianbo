@@ -114,8 +114,10 @@ function buildSeriesPanels() {
 function setPanelHeight(panel, open) {
   const wrap = panel.querySelector('.sp-gallery-wrap');
   if (open) {
-    // Set to actual content height so nothing is clipped
-    wrap.style.maxHeight = wrap.scrollHeight + 'px';
+    // Use a large fixed ceiling — lazy-loaded images mean scrollHeight
+    // is unreliable at click time and content can exceed a measured value.
+    // The transition animates from 0 → this value; closing snaps to 0.
+    wrap.style.maxHeight = '8000px';
   } else {
     wrap.style.maxHeight = '0px';
   }
@@ -126,23 +128,31 @@ function togglePanel(key) {
   if (!panel) return;
   const isOpen = panel.classList.contains('sp--open');
 
-  // Close all open panels
+  const header = panel.querySelector('.sp-header');
+  const headerTopBefore = header.getBoundingClientRect().top;
+
+  // Collapse all open panels INSTANTLY (no transition) so the layout
+  // settles synchronously and getBoundingClientRect gives the real value.
   document.querySelectorAll('.sp--open').forEach(p => {
     p.classList.remove('sp--open');
-    setPanelHeight(p, false);
+    const w = p.querySelector('.sp-gallery-wrap');
+    w.style.transition = 'none';
+    w.style.maxHeight = '0px';
   });
 
-  // Open the clicked panel if it was previously closed
+  // Force a synchronous reflow so the browser applies the collapsed height now.
+  void document.body.offsetHeight;
+
+  // Compensate scroll for the layout shift that just happened.
+  const shift = header.getBoundingClientRect().top - headerTopBefore;
+  if (shift !== 0) window.scrollTo({ top: window.scrollY + shift, behavior: 'instant' });
+
+  // Open the clicked panel WITH the normal transition restored.
   if (!isOpen) {
     panel.classList.add('sp--open');
-    setPanelHeight(panel, true);
-    // Smooth scroll so the header stays in view
-    setTimeout(() => {
-      const headerRect = panel.querySelector('.sp-header').getBoundingClientRect();
-      if (headerRect.top < 0) {
-        panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    }, 100);
+    const w = panel.querySelector('.sp-gallery-wrap');
+    w.style.transition = '';   // restore CSS transition
+    w.style.maxHeight = '8000px';
   }
 }
 
