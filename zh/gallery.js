@@ -67,6 +67,7 @@ function buildSeriesPanels() {
         <div class="gallery-item-overlay"><div class="gallery-item-info">
           <div class="gallery-item-title">${w.zh}</div>
           <div class="gallery-item-year">${w.medium}</div>
+          ${w.size ? `<div class="gallery-item-size">${w.size}</div>` : ''}
         </div></div>
       </div>`;
     }).join('');
@@ -157,7 +158,7 @@ function navigateLightbox(dir) {
 function updateLightbox() {
   const work = DEFAULT_WORKS[currentIndex];
   const imgEl = document.getElementById('lightbox-img');
-  document.getElementById('lightbox-caption').textContent = work.zh + '  ·  ' + work.medium;
+  document.getElementById('lightbox-caption').textContent = work.zh + '  ·  ' + work.medium + (work.size ? '  ·  ' + work.size : '');
   imgEl.src = '../' + work.src;
   imgEl.alt = work.zh;
 }
