@@ -445,11 +445,20 @@ nav.menu-open .nav-hamburger span:nth-child(3) { transform: translateY(-6.5px) r
   color: var(--muted);
 }
 .sp-arrow {
-  font-size: 1rem;
-  color: var(--warm);
-  transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1);
-  display: inline-block;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1.5px solid var(--warm);
+  color: var(--ink);
+  font-size: 1.3rem;
+  line-height: 1;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1), background 0.3s, color 0.3s;
 }
+.sp-header:hover .sp-arrow { background: var(--warm); color: var(--paper); }
 .sp--open .sp-arrow { transform: rotate(180deg); }
 
 /* Expandable gallery below header — max-height set by JS to actual scrollHeight */
